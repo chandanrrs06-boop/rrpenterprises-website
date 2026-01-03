@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="icon" type="image/png" href="assets/logo.png">
-    <title>RRP Enterprises | Smart Logistics Ecosystem</title>
+    <title>RRP Enterprises | All India Logistics Network</title>
     
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -18,7 +18,7 @@
                 <h1 class="brand-text">RRP ENTERPRISES</h1>
             </div>
             <div class="nav-actions">
-                <a href="mailto:contact@rrpenterprises.co.in" class="glass-pill">Get in Touch</a>
+                <a href="mailto:contact@rrpenterprises.co.in" class="glass-pill">Contact</a>
             </div>
         </div>
     </nav>
@@ -28,8 +28,8 @@
         <div class="hero-main">
             <div class="header-unit">
                 <div class="neon-badge">COMING SOON</div>
-                <h2 class="main-title">The Future of <br><span class="glow-text">Indian Logistics</span></h2>
-                <p>Intelligent truck booking for every Pincode, Mandal, and Taluk in India.</p>
+                <h2 class="main-title">India's Smartest <br><span class="glow-text">Trucking Network</span></h2>
+                <p>Booking solutions for every Mandal, Village, and Pincode in India.</p>
             </div>
 
             <div class="inquiry-deck">
@@ -37,8 +37,8 @@
                     <div class="deck-grid">
                         
                         <div class="field-box">
-                            <label><i class="fas fa-circle-dot origin-dot"></i> ORIGIN POINT</label>
-                            <input type="text" name="Origin" list="hubs" placeholder="City or Pincode" required>
+                            <label><i class="fas fa-circle-dot origin-dot"></i> LOADING POINT</label>
+                            <input type="text" name="Loading_Point" list="india-locations" placeholder="Search Village, Mandal or Pincode" required>
                         </div>
                         
                         <div class="deck-divider">
@@ -48,12 +48,12 @@
 
                         <div class="field-box">
                             <label><i class="fas fa-location-dot dest-dot"></i> UNLOADING POINT</label>
-                            <input type="text" name="Destination" list="hubs" placeholder="City or Pincode" required>
+                            <input type="text" name="Unloading_Point" list="india-locations" placeholder="Search Village, Mandal or Pincode" required>
                         </div>
 
                         <div class="field-box full-span">
                             <label><i class="fas fa-phone-volume"></i> DIRECT CONNECTIVITY</label>
-                            <input type="tel" name="Phone" placeholder="10-Digit Mobile Number" pattern="[0-9]{10}" required>
+                            <input type="tel" name="Customer_Phone" placeholder="10-Digit Mobile Number" pattern="[0-9]{10}" required>
                         </div>
                     </div>
 
@@ -61,17 +61,21 @@
                         <span>GENERATE SMART INQUIRY</span>
                     </button>
                     
-                    <input type="hidden" name="_subject" value="New High-Tech Inquiry - RRP">
+                    <input type="hidden" name="_subject" value="New Village-Level Inquiry - RRP">
                 </form>
             </div>
         </div>
     </section>
 
-    <datalist id="hubs">
-        <option value="Ahmedabad, GJ"><option value="Bengaluru, KA"><option value="Chennai, TN">
-        <option value="Delhi, NCR"><option value="Hyderabad, TS"><option value="Mumbai, MH">
-        <option value="Pune, MH"><option value="Visakhapatnam, AP">
-    </datalist>
+    <datalist id="india-locations">
+        <option value="Ahmedabad, Gujarat"><option value="Anantapur, Andhra Pradesh">
+        <option value="Bengaluru, Karnataka"><option value="Chittoor, Andhra Pradesh">
+        <option value="Chennai, Tamil Nadu"><option value="Delhi, NCR">
+        <option value="Guntur, Andhra Pradesh"><option value="Hyderabad, Telangana">
+        <option value="Kurnool, Andhra Pradesh"><option value="Mumbai, Maharashtra">
+        <option value="Nellore, Andhra Pradesh"><option value="Pune, Maharashtra">
+        <option value="Vijayawada, Andhra Pradesh"><option value="Visakhapatnam, Andhra Pradesh">
+        </datalist>
 
     <a href="https://wa.me/919494831803" class="floating-wa" target="_blank">
         <i class="fab fa-whatsapp"></i>
