@@ -1,62 +1,31 @@
-/* General Reset */
 * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Arial, sans-serif; }
-
 body { background-color: #ffffff; color: #333; line-height: 1.6; }
 
-/* Navbar Styling */
-.navbar { 
-    background: #fff; 
-    padding: 10px 10%; 
-    border-bottom: 2px solid #004a99; 
-    position: sticky; top: 0; z-index: 1000;
-}
+.navbar { background: #fff; padding: 10px 10%; border-bottom: 3px solid #004a99; position: sticky; top: 0; z-index: 1000; }
 .nav-container { display: flex; justify-content: space-between; align-items: center; }
+.logo-area { display: flex; align-items: center; gap: 12px; }
+.main-logo { height: 50px; width: auto; }
+.logo-text { font-size: 22px; font-weight: 800; color: #004a99; }
 
-.logo-area { display: flex; align-items: center; gap: 10px; }
-.main-logo { height: 50px; width: auto; } /* This looks for logo.png */
-.logo-text { font-size: 24px; font-weight: 800; color: #004a99; }
+.contact-btn { text-decoration: none; color: #004a99; font-weight: 600; border: 1px solid #004a99; padding: 8px 18px; border-radius: 4px; transition: 0.3s; }
+.contact-btn:hover { background: #004a99; color: #fff; }
 
-.contact-btn { 
-    text-decoration: none; color: #004a99; font-weight: 600; 
-    border: 1px solid #004a99; padding: 6px 15px; border-radius: 4px;
-    display: flex; align-items: center; gap: 8px;
-}
+.hero { height: 70vh; background: url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1600&q=80'); background-size: cover; background-position: center; }
+.hero-overlay { background: rgba(0, 0, 0, 0.7); height: 100%; display: flex; align-items: center; justify-content: center; text-align: center; color: white; padding: 20px; }
+.hero-content h1 { font-size: clamp(24px, 5vw, 42px); font-weight: 700; margin-bottom: 10px; }
 
-/* Hero Section */
-.hero { 
-    height: 70vh; 
-    background: url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1600&q=80'); 
-    background-size: cover; background-position: center; 
-}
-.hero-overlay { 
-    background: rgba(0, 0, 0, 0.65); height: 100%; 
-    display: flex; align-items: center; justify-content: center; text-align: center; color: white;
-}
-.hero-content h1 { font-size: 42px; font-weight: 700; margin-bottom: 10px; }
+.status-badge { background: #e67e22; color: white; padding: 8px 25px; border-radius: 4px; display: inline-block; margin: 20px 0; font-weight: bold; }
+.contact-card { background: rgba(255, 255, 255, 0.1); padding: 25px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.3); width: 100%; max-width: 450px; }
+.contact-details p { font-size: clamp(16px, 4vw, 22px); font-weight: 600; margin: 5px 0; }
+.contact-details i { color: #3498db; margin-right: 10px; }
 
-/* Badge & Contact Card */
-.status-badge {
-    background: #e67e22; color: white; padding: 8px 25px; 
-    border-radius: 4px; display: inline-block; margin: 25px 0; font-weight: bold;
-}
-.contact-card { 
-    background: rgba(255, 255, 255, 0.1); 
-    padding: 20px; border-radius: 8px; 
-    border: 1px solid rgba(255,255,255,0.3);
-    display: inline-block;
-}
-.contact-card h3 { font-size: 14px; text-transform: uppercase; margin-bottom: 10px; }
-.contact-details p { font-size: 22px; font-weight: 600; }
-.contact-details i { color: #3498db; margin-right: 8px; }
+.about-section { padding: 60px 10%; background: #f4f7f6; text-align: center; }
+.about-section h2 { color: #004a99; margin-bottom: 20px; }
+.about-section p { max-width: 800px; margin: 0 auto; font-size: 18px; color: #555; }
 
-/* Expertise Section */
-.expertise { padding: 50px 10%; text-align: center; }
-.expertise h2 { font-size: 28px; margin-bottom: 30px; color: #222; }
-.grid { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
-.card { 
-    background: white; padding: 30px; border-radius: 8px; width: 250px; 
-    border: 1px solid #eee; box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-}
+.expertise { padding: 60px 10%; text-align: center; }
+.grid { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; margin-top: 30px; }
+.card { background: white; padding: 30px; border-radius: 8px; width: 280px; border: 1px solid #eee; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
 .card i { font-size: 40px; color: #004a99; margin-bottom: 15px; }
 
-footer { background: #f4f4f4; padding: 20px; text-align: center; font-size: 14px; color: #666; }
+footer { background: #111; color: #888; padding: 30px; text-align: center; font-size: 14px; }
