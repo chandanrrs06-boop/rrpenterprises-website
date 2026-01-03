@@ -1,51 +1,59 @@
-/* Color Palette: Blue Theme */
 :root {
     --primary-blue: #004a99;
-    --light-blue: #3498db;
-    --dark-blue: #003366;
+    --dark-blue: #002b5b;
+    --accent-orange: #f39c12;
+    --bg-light: #f4f7f6;
     --white: #ffffff;
-    --accent: #e67e22;
 }
 
-* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Arial, sans-serif; }
+body { color: #333; line-height: 1.6; background-color: var(--white); }
 
-/* Navbar */
-.navbar { background: var(--white); padding: 10px 10%; border-bottom: 3px solid var(--primary-blue); position: sticky; top: 0; z-index: 1000; }
+/* Navigation */
+.navbar { background: var(--white); padding: 10px 8%; border-bottom: 3px solid var(--primary-blue); position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
 .nav-container { display: flex; justify-content: space-between; align-items: center; }
 .logo-area { display: flex; align-items: center; gap: 10px; }
-.main-logo { height: 50px; }
-.logo-text { font-size: 22px; font-weight: 800; color: var(--primary-blue); }
-.nav-links a { text-decoration: none; margin-left: 20px; color: #333; font-weight: 600; }
-.nav-call { background: var(--primary-blue); color: white !important; padding: 5px 15px; border-radius: 4px; }
+.nav-logo { height: 45px; }
+.logo-text { font-size: 20px; font-weight: 800; color: var(--primary-blue); letter-spacing: 1px; }
+.nav-links a { text-decoration: none; color: #444; font-weight: 600; margin-left: 20px; transition: 0.3s; }
+.contact-nav-btn { background: var(--primary-blue); color: white !important; padding: 8px 15px; border-radius: 4px; }
 
-/* Hero */
-.hero { height: 75vh; background: url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1600&q=80'); background-size: cover; background-position: center; }
-.hero-overlay { background: rgba(0, 43, 91, 0.7); height: 100%; display: flex; align-items: center; justify-content: center; text-align: center; color: white; }
-.hero-content h1 { font-size: 42px; margin-bottom: 10px; }
+/* Hero Section */
+.hero { height: 85vh; background: linear-gradient(rgba(0, 43, 91, 0.8), rgba(0, 43, 91, 0.8)), url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1600&q=80'); background-size: cover; background-position: center; }
+.hero-overlay { height: 100%; display: flex; align-items: center; justify-content: center; text-align: center; color: white; padding: 0 20px; }
 
-/* Contact Buttons */
-.hero-buttons { margin-top: 30px; display: flex; gap: 15px; justify-content: center; }
-.btn { text-decoration: none; padding: 12px 25px; border-radius: 5px; font-weight: bold; color: white; transition: 0.3s; }
-.call-btn { background: var(--light-blue); }
-.mail-btn { background: var(--primary-blue); border: 1px solid white; }
-.btn:hover { opacity: 0.9; transform: scale(1.05); }
+.hero-logo-container { margin-bottom: 20px; }
+.hero-logo { height: 120px; filter: drop-shadow(0 0 10px rgba(255,255,255,0.3)); }
+.hero-brand { font-size: 28px; font-weight: 800; margin-top: 10px; letter-spacing: 2px; }
 
-/* WhatsApp Floating Button */
-.whatsapp-float {
-    position: fixed; bottom: 20px; right: 20px; background: #25d366; color: white;
-    padding: 10px 20px; border-radius: 50px; text-decoration: none; font-weight: bold;
-    display: flex; align-items: center; gap: 10px; z-index: 2000; box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-}
-.whatsapp-float i { font-size: 24px; }
+.hero-content h1 { font-size: clamp(28px, 5vw, 48px); font-weight: 700; margin-bottom: 10px; }
+.hero-content p { font-size: 20px; opacity: 0.9; margin-bottom: 25px; }
 
-/* Sections */
-.about-section { padding: 60px 10%; background: #f0f4f8; text-align: center; }
-.about-section h2 { color: var(--primary-blue); margin-bottom: 20px; }
-.expertise { padding: 60px 10%; text-align: center; }
-.grid { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 30px; }
-.card { background: white; padding: 30px; border-radius: 8px; width: 250px; border-top: 4px solid var(--primary-blue); box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
-.card i { font-size: 40px; color: var(--primary-blue); margin-bottom: 15px; }
+.status-badge { background: var(--accent-orange); color: white; padding: 8px 25px; border-radius: 4px; display: inline-block; font-weight: bold; margin-bottom: 30px; }
+
+/* Action Buttons */
+.hero-action-btns { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }
+.btn { text-decoration: none; padding: 15px 35px; border-radius: 50px; font-weight: bold; font-size: 18px; transition: 0.3s; display: flex; align-items: center; gap: 10px; }
+.call-btn { background: #3498db; color: white; }
+.email-btn { background: transparent; border: 2px solid white; color: white; }
+.btn:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0,0,0,0.3); }
+
+/* Floating WhatsApp */
+.whatsapp-float { position: fixed; bottom: 30px; left: 30px; background: #25d366; color: white; padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: bold; display: flex; align-items: center; gap: 10px; z-index: 2000; box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
+
+/* About & Services */
+.about-section { padding: 80px 10%; background: var(--bg-light); text-align: center; }
+.about-section h2 { color: var(--primary-blue); font-size: 32px; margin-bottom: 20px; }
+.about-section p { max-width: 900px; margin: 0 auto; font-size: 19px; color: #555; }
+
+.expertise { padding: 80px 10%; text-align: center; }
+.expertise h2 { font-size: 32px; margin-bottom: 50px; color: var(--dark-blue); }
+.grid { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; }
+.card { background: white; padding: 40px; border-radius: 12px; width: 300px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border-bottom: 5px solid var(--primary-blue); transition: 0.3s; }
+.card:hover { transform: translateY(-10px); }
+.icon-box { font-size: 50px; color: var(--primary-blue); margin-bottom: 20px; }
+.card h3 { font-size: 22px; color: var(--dark-blue); }
 
 /* Footer */
-footer { background: var(--dark-blue); color: #ccc; padding: 40px; text-align: center; font-size: 14px; }
-.status-badge { background: var(--accent); color: white; padding: 5px 20px; border-radius: 4px; display: inline-block; margin-top: 15px; }
+footer { background: var(--dark-blue); color: #888; padding: 50px 10%; text-align: center; }
+.footer-contacts { margin-top: 15px; display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; color: white; }
