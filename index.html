@@ -3,11 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <link rel="icon" type="image/png" href="assets/logo.png">
-    
-    <title>RRP Enterprises | Smart Logistics Ecosystem</title>
-    <meta name="description" content="Next-gen truck booking for every Pincode, Mandal, and Taluk in India. Precision logistics by RRP Enterprises.">
+    <title>RRP Enterprises | India Wide Smart Logistics</title>
     
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -21,6 +18,7 @@
                 <span class="brand-text">RRP ENTERPRISES</span>
             </div>
             <div class="nav-actions">
+                <a href="#" class="nav-link">Network</a>
                 <a href="mailto:contact@rrpenterprises.co.in" class="glass-btn">Get in Touch</a>
             </div>
         </div>
@@ -32,15 +30,16 @@
             <div class="header-unit">
                 <div class="neon-badge">COMING SOON</div>
                 <h1>The Future of <br><span class="glow-text">Indian Logistics</span></h1>
-                <p>Intelligent truck booking for every Pincode, Mandal, and Taluk in India.</p>
+                <p>Advanced truck booking for every Pincode, Mandal, and District in India.</p>
             </div>
 
             <div class="inquiry-deck">
                 <form action="https://formspree.io/f/mpqwlvba" method="POST" class="deck-form">
                     <div class="deck-grid">
+                        
                         <div class="field-box">
-                            <label><i class="fas fa-circle-dot origin-dot"></i> Origin Point</label>
-                            <input type="text" name="Origin" list="hubs" placeholder="City or Pincode" required>
+                            <label><i class="fas fa-circle-dot origin-dot"></i> ORIGIN POINT</label>
+                            <input type="text" name="Origin_Location" list="india-database" placeholder="Search City, Mandal or Pincode" required>
                         </div>
                         
                         <div class="deck-divider">
@@ -48,13 +47,13 @@
                         </div>
 
                         <div class="field-box">
-                            <label><i class="fas fa-location-dot dest-dot"></i> Unloading Point</label>
-                            <input type="text" name="Destination" list="hubs" placeholder="City or Pincode" required>
+                            <label><i class="fas fa-location-dot dest-dot"></i> UNLOADING POINT</label>
+                            <input type="text" name="Destination_Location" list="india-database" placeholder="Search City, Mandal or Pincode" required>
                         </div>
 
                         <div class="field-box full-span">
-                            <label><i class="fas fa-phone-volume"></i> Direct Connectivity</label>
-                            <input type="tel" name="Phone" placeholder="10-Digit Mobile Number" pattern="[0-9]{10}" required>
+                            <label><i class="fas fa-phone-volume"></i> DIRECT CONNECTIVITY</label>
+                            <input type="tel" name="Customer_Mobile" placeholder="9113806037" pattern="[0-9]{10}" required>
                         </div>
                     </div>
 
@@ -63,13 +62,13 @@
                         <div class="btn-glow"></div>
                     </button>
                     
-                    <input type="hidden" name="_subject" value="New High-Tech Inquiry - RRP">
+                    <input type="hidden" name="_subject" value="New High-Tech Truck Inquiry - RRP">
                 </form>
             </div>
         </div>
     </section>
 
-    <datalist id="hubs">
+    <datalist id="india-database">
         <option value="Ahmedabad, GJ"><option value="Bengaluru, KA"><option value="Chennai, TN">
         <option value="Delhi, NCR"><option value="Hyderabad, TS"><option value="Kolkata, WB">
         <option value="Mumbai, MH"><option value="Pune, MH"><option value="Visakhapatnam, AP">
