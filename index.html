@@ -3,79 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <link rel="icon" type="image/png" href="assets/logo.png">
-    <title>RRP Enterprises | Next-Gen Logistics</title>
+    
+    <title>RRP Enterprises | Smart Logistics Ecosystem</title>
+    <meta name="description" content="Next-gen truck booking for every Pincode, Mandal, and Taluk in India. Precision logistics by RRP Enterprises.">
+    
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-    <nav class="glass-nav">
+    <nav class="cyber-nav">
         <div class="nav-container">
             <div class="brand">
                 <img src="assets/logo.png" alt="RRP" class="logo-img">
                 <span class="brand-text">RRP ENTERPRISES</span>
             </div>
-            <div class="nav-links">
-                <a href="#services">Network</a>
-                <a href="mailto:contact@rrpenterprises.co.in" class="cta-pill">Get in Touch</a>
+            <div class="nav-actions">
+                <a href="mailto:contact@rrpenterprises.co.in" class="glass-btn">Get in Touch</a>
             </div>
         </div>
     </nav>
 
-    <main class="hero-deck">
-        <div class="hero-bg"></div>
-        <div class="content-container">
-            <div class="hero-header">
-                <div class="status-chip">COMING SOON</div>
-                <h1>India's Smartest <br><span class="gradient-text">Logistics Ecosystem</span></h1>
-                <p>Connecting every Pincode, Mandal, and Taluk with AI-driven precision.</p>
+    <section class="hero-viewport">
+        <div class="dynamic-bg"></div>
+        <div class="hero-main">
+            <div class="header-unit">
+                <div class="neon-badge">COMING SOON</div>
+                <h1>The Future of <br><span class="glow-text">Indian Logistics</span></h1>
+                <p>Intelligent truck booking for every Pincode, Mandal, and Taluk in India.</p>
             </div>
 
-            <div class="booking-deck">
-                <form action="https://formspree.io/f/mpqwlvba" method="POST" class="smart-form">
-                    <div class="form-grid">
-                        <div class="input-wrap">
-                            <label><i class="fas fa-location-dot green-icon"></i> Origin Point</label>
-                            <input type="text" name="From" list="hubs" placeholder="City, Mandal or Pincode" required>
+            <div class="inquiry-deck">
+                <form action="https://formspree.io/f/mpqwlvba" method="POST" class="deck-form">
+                    <div class="deck-grid">
+                        <div class="field-box">
+                            <label><i class="fas fa-circle-dot origin-dot"></i> Origin Point</label>
+                            <input type="text" name="Origin" list="hubs" placeholder="City or Pincode" required>
                         </div>
                         
-                        <div class="form-connector">
-                            <i class="fas fa-right-left"></i>
+                        <div class="deck-divider">
+                            <i class="fas fa-arrow-right-arrow-left"></i>
                         </div>
 
-                        <div class="input-wrap">
-                            <label><i class="fas fa-location-crosshairs red-icon"></i> Destination Point</label>
-                            <input type="text" name="To" list="hubs" placeholder="City, Mandal or Pincode" required>
+                        <div class="field-box">
+                            <label><i class="fas fa-location-dot dest-dot"></i> Unloading Point</label>
+                            <input type="text" name="Destination" list="hubs" placeholder="City or Pincode" required>
                         </div>
 
-                        <div class="input-wrap full-width">
-                            <label><i class="fas fa-mobile-screen blue-icon"></i> Connect with you</label>
-                            <input type="tel" name="Mobile" placeholder="+91 Mobile Number" pattern="[0-9]{10}" required>
+                        <div class="field-box full-span">
+                            <label><i class="fas fa-phone-volume"></i> Direct Connectivity</label>
+                            <input type="tel" name="Phone" placeholder="10-Digit Mobile Number" pattern="[0-9]{10}" required>
                         </div>
                     </div>
 
-                    <button type="submit" class="glow-btn">
-                        <span>Generate Instant Inquiry</span>
-                        <i class="fas fa-arrow-right"></i>
+                    <button type="submit" class="action-trigger">
+                        <span>GENERATE SMART INQUIRY</span>
+                        <div class="btn-glow"></div>
                     </button>
+                    
+                    <input type="hidden" name="_subject" value="New High-Tech Inquiry - RRP">
                 </form>
             </div>
         </div>
-    </main>
+    </section>
 
     <datalist id="hubs">
-        <option value="Ahmedabad, GJ"><option value="Bengaluru, KA">
-        <option value="Delhi, NCR"><option value="Hyderabad, TS">
-        <option value="Mumbai, MH"><option value="Pune, MH">
-        <option value="Visakhapatnam, AP"><option value="Vijayawada, AP">
+        <option value="Ahmedabad, GJ"><option value="Bengaluru, KA"><option value="Chennai, TN">
+        <option value="Delhi, NCR"><option value="Hyderabad, TS"><option value="Kolkata, WB">
+        <option value="Mumbai, MH"><option value="Pune, MH"><option value="Visakhapatnam, AP">
+        <option value="Vijayawada, AP"><option value="Lucknow, UP"><option value="Jaipur, RJ">
     </datalist>
 
-    <a href="https://wa.me/919494831803" class="wa-float" target="_blank">
+    <a href="https://wa.me/919494831803" class="floating-wa" target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
 
-    <footer>
+    <footer class="cyber-footer">
         <p>&copy; 2026 RRP Enterprises. All Rights Reserved.</p>
     </footer>
 
