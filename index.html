@@ -4,10 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="assets/logo.png">
-    
-    <title>RRP Enterprises | All India Truck Booking & Logistics</title>
-    <meta name="description" content="Book trucks for any Pincode, Mandal, or District in India. RRP Enterprises offers reliable Pan-India logistics solutions.">
-
+    <title>RRP Enterprises | Premium Logistics Solutions</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -19,7 +16,7 @@
                 <img src="assets/logo.png" alt="RRP Logo" class="nav-logo">
                 <span class="brand-name">RRP ENTERPRISES</span>
             </div>
-            <div class="nav-links">
+            <div class="nav-menu">
                 <a href="#about">About</a>
                 <a href="#services">Services</a>
                 <a href="mailto:contact@rrpenterprises.co.in" class="nav-cta">Contact Us</a>
@@ -30,69 +27,60 @@
     <header class="hero">
         <div class="hero-container">
             <div class="booking-card">
-                <h3>Need a full truck?</h3>
+                <div class="card-header">
+                    <h3>Need a full truck?</h3>
+                    <p>Pan-India District & Mandal Search</p>
+                </div>
+                
                 <form action="https://formspree.io/f/mpqwlvba" method="POST" class="truck-form">
-                    
-                    <div class="input-row">
-                        <div class="dot green"><i class="fas fa-arrow-up"></i></div>
-                        <input type="text" name="Loading_From" list="india-hubs" placeholder="Loading City, Mandal or Pincode" required>
-                    </div>
-
-                    <div class="vertical-line"></div>
-
-                    <div class="input-row">
-                        <div class="dot red"><i class="fas fa-arrow-down"></i></div>
-                        <input type="text" name="Unloading_To" list="india-hubs" placeholder="Unloading City, Mandal or Pincode" required>
-                    </div>
-
-                    <div class="input-row contact-field">
-                        <div class="dot blue"><i class="fas fa-phone-alt"></i></div>
-                        <input type="tel" name="Mobile_Number" placeholder="Your 10-Digit Mobile Number" pattern="[0-9]{10}" required>
-                    </div>
-
-                    <input type="hidden" name="_subject" value="New Truck Inquiry from RRP Website">
-                    
-                    <div class="info-banner">
-                        <div class="info-content">
-                            <span class="info-title">Pan-India Coverage</span>
-                            <span class="info-sub">Serving all Districts & Taluks</span>
+                    <div class="input-section">
+                        <div class="input-row">
+                            <div class="dot-wrapper">
+                                <div class="dot green"><i class="fas fa-arrow-up"></i></div>
+                                <div class="line-path"></div>
+                            </div>
+                            <input type="text" name="Loading_From" list="india-hubs" placeholder="Loading City, Mandal or Pincode" required>
                         </div>
-                        <i class="fas fa-map-marked-alt shield-icon"></i>
+
+                        <div class="input-row">
+                            <div class="dot-wrapper">
+                                <div class="dot red"><i class="fas fa-arrow-down"></i></div>
+                            </div>
+                            <input type="text" name="Unloading_To" list="india-hubs" placeholder="Unloading City, Mandal or Pincode" required>
+                        </div>
                     </div>
 
-                    <button type="submit" class="submit-btn">Generate Inquiry</button>
+                    <div class="contact-row">
+                        <i class="fas fa-phone-alt"></i>
+                        <input type="tel" name="Mobile" placeholder="Enter 10-Digit Mobile Number" pattern="[0-9]{10}" required>
+                    </div>
+
+                    <div class="promo-box">
+                        <div class="promo-icon"><i class="fas fa-shield-alt"></i></div>
+                        <div class="promo-text">
+                            <strong>Safe & Secure</strong>
+                            <span>Real-time Inquiry Generation</span>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Get Price Estimate</button>
                 </form>
 
                 <datalist id="india-hubs">
-                    <option value="Ahmedabad, Gujarat">
-                    <option value="Bengaluru, Karnataka">
-                    <option value="Chennai, Tamil Nadu">
-                    <option value="Delhi, NCR">
-                    <option value="Hyderabad, Telangana">
-                    <option value="Kolkata, West Bengal">
-                    <option value="Mumbai, Maharashtra">
-                    <option value="Pune, Maharashtra">
-                    <option value="Guwahati, Assam">
-                    <option value="Indore, Madhya Pradesh">
-                    <option value="Jaipur, Rajasthan">
-                    <option value="Kochi, Kerala">
-                    <option value="Lucknow, Uttar Pradesh">
-                    <option value="Ludhiana, Punjab">
-                    <option value="Nagpur, Maharashtra">
-                    <option value="Patna, Bihar">
-                    <option value="Raipur, Chhattisgarh">
-                    <option value="Surat, Gujarat">
-                    <option value="Vijayawada, Andhra Pradesh">
-                    <option value="Visakhapatnam, Andhra Pradesh">
-                    </datalist>
+                    <option value="Ahmedabad, Gujarat"><option value="Bengaluru, Karnataka">
+                    <option value="Chennai, Tamil Nadu"><option value="Delhi, NCR">
+                    <option value="Hyderabad, Telangana"><option value="Kolkata, West Bengal">
+                    <option value="Mumbai, Maharashtra"><option value="Pune, Maharashtra">
+                    <option value="Visakhapatnam, Andhra Pradesh"><option value="Vijayawada, Andhra Pradesh">
+                </datalist>
             </div>
 
-            <div class="hero-text">
-                <h1>India's #1<br>Truck Booking App</h1>
-                <p>Reliable logistics solutions for every Pincode and Mandal across the nation.</p>
-                <div class="hero-badge-area">
-                     <img src="assets/logo.png" alt="RRP Logo" class="hero-logo-white">
-                     <div class="badge orange">COMING SOON</div>
+            <div class="hero-content">
+                <h1 class="main-title">India's Leading<br><span>Truck Booking</span> Partner</h1>
+                <p class="sub-text">Connecting every Pincode and Mandal with precision logistics.</p>
+                <div class="hero-footer">
+                    <img src="assets/logo.png" alt="RRP" class="footer-logo">
+                    <div class="badge orange">COMING SOON</div>
                 </div>
             </div>
         </div>
@@ -105,7 +93,6 @@
 
     <footer>
         <p>&copy; 2026 RRP Enterprises. All Rights Reserved.</p>
-        <p>Email: contact@rrpenterprises.co.in | Phone: 9494831803</p>
     </footer>
 
 </body>
