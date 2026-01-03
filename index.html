@@ -49,27 +49,23 @@
 
             <div class="booking-portal" id="booking">
                 <div class="tab-switcher">
-                    <button class="tab-btn active">Full Truck (FTL)</button>
-                    <button class="tab-btn">Part Load (PTL)</button>
+                    <button type="button" class="tab-btn active" onclick="switchTab(this, 'Full Truck (FTL)')">Full Truck (FTL)</button>
+                    <button type="button" class="tab-btn" onclick="switchTab(this, 'Part Load (PTL)')">Part Load (PTL)</button>
                 </div>
 
-                <form action="https://formspree.io/f/mpqwlvba" method="POST" class="booking-form">
+                <form action="https://formspree.io/f/mpqwlvba" method="POST" class="booking-form" id="truckForm">
+                    <input type="hidden" name="Service_Type" id="serviceType" value="Full Truck (FTL)">
+                    
                     <div class="form-body">
                         <div class="route-search">
                             <div class="input-field">
                                 <label><i class="fas fa-map-marker-alt origin-icon"></i> LOADING POINT</label>
-                                <input type="text" name="Origin" list="india-database" placeholder="Enter City, Mandal or Pincode" required>
-                            </div>
-                            
-                            <div class="route-line">
-                                <div class="dot"></div>
-                                <div class="dashed"></div>
-                                <div class="dot"></div>
+                                <input type="text" name="Origin" placeholder="Enter City, Mandal or Pincode" required>
                             </div>
 
                             <div class="input-field">
                                 <label><i class="fas fa-location-dot dest-icon"></i> UNLOADING POINT</label>
-                                <input type="text" name="Destination" list="india-database" placeholder="Enter City, Mandal or Pincode" required>
+                                <input type="text" name="Destination" placeholder="Enter City, Mandal or Pincode" required>
                             </div>
                         </div>
 
@@ -94,30 +90,27 @@
                         <span>GENERATE INSTANT QUOTE</span>
                         <i class="fas fa-arrow-right"></i>
                     </button>
-                    
-                    <input type="hidden" name="_subject" value="New Enterprise Truck Inquiry - RRP">
                 </form>
             </div>
         </div>
     </main>
 
-    <datalist id="india-database">
-        <option value="Ahmedabad, GJ"><option value="Bengaluru, KA"><option value="Chennai, TN">
-        <option value="Delhi, NCR"><option value="Hyderabad, TS"><option value="Kolkata, WB">
-        <option value="Mumbai, MH"><option value="Pune, MH"><option value="Visakhapatnam, AP">
-        <option value="Vijayawada, AP">
-    </datalist>
-
-    <a href="https://wa.me/919494831803" class="wa-action" target="_blank">
-        <i class="fab fa-whatsapp"></i>
-        <span>WhatsApp Booking</span>
-    </a>
-
     <footer class="enterprise-footer">
-        <div class="footer-bottom">
-            <p>&copy; 2026 RRP Enterprises. Serving 1800+ Cities in India.</p>
+        <div class="footer-container">
+            <p>&copy; 2026 RRP Enterprises. All Rights Reserved. Serving 1800+ Cities in India.</p>
         </div>
     </footer>
+
+    <script>
+        function switchTab(element, service) {
+            // Remove active class from all buttons
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+            // Add active class to clicked button
+            element.classList.add('active');
+            // Update hidden form field
+            document.getElementById('serviceType').value = service;
+        }
+    </script>
 
 </body>
 </html>
