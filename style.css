@@ -1,6 +1,6 @@
-/* RRP ENTERPRISES PROFESSIONAL CORE STYLESHEET
-   - FULL REPLACEMENT | NO TRIM POLICY
-   - FIXED LAYOUT ENGINE | ENHANCED COLORS
+/* RRP ENTERPRISES PROFESSIONAL STYLESHEET
+   - FULL MOBILE & SYSTEM COMPATIBILITY ENGINE
+   - FIXED LAYOUT | HIGH CONTRAST | NO TRIM SYSTEM
 */
 
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap');
@@ -11,16 +11,13 @@
     --navy-dark-bg: #000b1d;
     --white-pure: #ffffff;
     --muted-text: #6b7280;
-    --gray-light-bg: #f4f7fa;
     --footer-teal-dark: #002d2d;
     --brand-crimson: #e61e25;
     --vibrant-red-cta: #ff3b3b;
     --radius-standard: 20px;
-    --section-gap-lg: 110px;
-    --premium-shadow: 0 40px 100px rgba(0, 0, 0, 0.45);
 }
 
-/* 1. CORE RESET & BASE ENGINE */
+/* 1. CORE RESET & COMPATIBILITY BASE */
 * { 
     margin: 0; 
     padding: 0; 
@@ -28,22 +25,27 @@
     font-family: 'Plus Jakarta Sans', sans-serif; 
 }
 
+html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 body { 
     background: var(--navy-dark-bg); 
     color: var(--white-pure); 
     line-height: 1.7; 
-    overflow-x: hidden; 
     scroll-behavior: smooth; 
 }
 
 .section-container { 
     max-width: 1280px; 
     margin: 0 auto; 
-    padding: 0 40px; 
+    padding: 0 5%; 
     width: 100%; 
 }
 
-/* 2. FIXED HEADER & NAVIGATION SYSTEM */
+/* 2. FIXED SYSTEM NAVIGATION */
 .main-nav { 
     position: fixed; 
     top: 0; 
@@ -64,62 +66,15 @@ body {
     width: 100%; 
 }
 
-.brand-identity { 
-    display: flex; 
-    align-items: center; 
-    gap: 15px; 
-}
+.nav-logo { height: 48px; background: #fff; padding: 6px; border-radius: 8px; }
+.brand-main { font-weight: 800; font-size: 20px; color: #fff; }
+.brand-tag { font-size: 10px; font-weight: 700; color: var(--accent-sky); display: block; text-transform: uppercase; }
 
-.nav-logo { 
-    height: 48px; 
-    background: #fff; 
-    padding: 6px; 
-    border-radius: 8px; 
-}
+.nav-links { display: flex; gap: 32px; align-items: center; }
+.nav-links a { color: #fff; text-decoration: none; font-size: 14px; font-weight: 600; }
+.nav-cta { background: var(--white-pure); color: var(--navy-dark-bg) !important; padding: 10px 26px; border-radius: 50px; font-weight: 800; }
 
-.brand-main { 
-    font-weight: 800; 
-    font-size: 20px; 
-    color: #fff; 
-    letter-spacing: 0.5px; 
-}
-
-.brand-tag { 
-    font-size: 10px; 
-    font-weight: 700; 
-    color: var(--accent-sky); 
-    display: block; 
-    text-transform: uppercase; 
-}
-
-.nav-links { 
-    display: flex; 
-    gap: 32px; 
-    align-items: center; 
-}
-
-.nav-links a { 
-    color: #fff; 
-    text-decoration: none; 
-    font-size: 14px; 
-    font-weight: 600; 
-    transition: 0.3s ease-in-out; 
-}
-
-.nav-links a:hover { color: var(--accent-sky); }
-
-.nav-cta { 
-    background: var(--white-pure); 
-    color: var(--navy-dark-bg) !important; 
-    padding: 10px 26px; 
-    border-radius: 50px; 
-    font-weight: 800; 
-    transition: 0.3s transform;
-}
-
-.nav-cta:hover { transform: scale(1.05); }
-
-/* 3. HERO LAYOUT ENGINE */
+/* 3. HERO GRID ENGINE */
 .hero-section { 
     min-height: 100vh; 
     padding: 140px 0 100px; 
@@ -137,297 +92,102 @@ body {
 
 .hero-layout-grid { 
     display: grid; 
-    grid-template-columns: 1.25fr 0.75fr; 
+    grid-template-columns: 1fr 450px; 
     gap: 75px; 
     align-items: center; 
     width: 100%; 
 }
 
-.hero-content-block h1 { 
-    font-size: 62px; 
-    font-weight: 800; 
-    line-height: 1.1; 
-    margin-bottom: 25px; 
-}
-
+.hero-content-block h1 { font-size: 62px; font-weight: 800; line-height: 1.1; margin-bottom: 25px; }
 .hero-content-block h1 span { color: var(--accent-sky); }
+.startup-badge { border: 1px solid var(--accent-sky); padding: 8px 20px; border-radius: 8px; font-size: 13px; font-weight: 800; margin-bottom: 25px; display: inline-block; }
 
-.startup-badge { 
-    display: inline-block; 
-    border: 1px solid var(--accent-sky); 
-    padding: 8px 20px; 
-    border-radius: 8px; 
-    font-size: 13px; 
-    font-weight: 800; 
-    margin-bottom: 25px; 
-    color: var(--accent-sky); 
-}
+.trust-indicators-grid { display: flex; gap: 35px; margin-top: 35px; }
+.indicator-item strong { display: block; font-size: 26px; color: var(--white-pure); }
 
-.trust-indicators-grid { 
-    display: flex; 
-    gap: 35px; 
-    margin-top: 35px; 
-}
-
-.indicator-item strong { 
-    display: block; 
-    font-size: 26px; 
-    color: var(--pure-white); 
-}
-
-.indicator-item span { font-size: 13px; color: var(--muted-text); }
-
-/* 4. BOOKING CARD: FIXED MARGINS */
+/* 4. BOOKING CARD: SYSTEM FIXED MARGINS */
 .booking-portal { 
     background: var(--white-pure); 
     color: #000; 
     padding: 45px; 
     border-radius: var(--radius-standard); 
-    box-shadow: var(--premium-shadow); 
+    box-shadow: 0 40px 100px rgba(0, 0, 0, 0.45); 
     width: 100%; 
 }
 
-.booking-header h3 { 
-    font-size: 22px; 
-    color: var(--primary-blue); 
-    font-weight: 800; 
-    margin-bottom: 30px; 
-    border-bottom: 4px solid var(--gray-light-bg);
-    padding-bottom: 15px;
-}
-
+.booking-header h3 { font-size: 22px; color: var(--primary-blue); font-weight: 800; margin-bottom: 30px; border-bottom: 4px solid #f0f7ff; padding-bottom: 15px; }
 .form-field-group { margin-bottom: 20px; }
-.form-field-group label { 
-    display: block; 
-    font-size: 11px; 
-    font-weight: 800; 
-    color: #889; 
-    margin-bottom: 8px; 
-}
-
-input, textarea, select { 
-    width: 100%; 
-    padding: 15px; 
-    border: 1px solid #e2e8f0; 
-    border-radius: 12px; 
-    background: #f9fbff; 
-    font-size: 14px; 
-}
-
-.form-dual-row { 
-    display: grid; 
-    grid-template-columns: 1fr 1fr; 
-    gap: 15px; 
-}
+input, textarea, select { width: 100%; padding: 15px; border: 1px solid #e2e8f0; border-radius: 12px; background: #f9fbff; font-size: 14px; }
+.form-dual-row { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
 
 .hero-primary-btn { 
-    margin-top: 15px; 
-    width: 100%; 
-    padding: 20px; 
-    background: #000; 
-    color: #fff; 
-    border: none; 
-    border-radius: 12px; 
-    font-weight: 800; 
-    cursor: pointer; 
-    transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+    width: 100%; padding: 20px; background: #000; color: #fff; border: none; border-radius: 12px; font-weight: 800; cursor: pointer; transition: 0.4s ease; 
 }
 
-.hero-primary-btn:hover { background: var(--primary-blue); transform: translateY(-5px); }
-
-/* 5. REPAIRED CLIENT CAROUSEL */
+/* 5. CAROUSEL & BRANDING SYSTEM */
 .client-carousel-section { background: #fff; padding: 110px 0; text-align: center; }
-.carousel-heading-red { 
-    color: var(--brand-crimson); 
-    font-size: 30px; 
-    font-weight: 800; 
-    margin-bottom: 55px; 
-}
+.carousel-heading-red { color: var(--brand-crimson); font-size: 30px; font-weight: 800; margin-bottom: 55px; }
 
-.carousel-outer-wrapper { 
-    display: flex; 
-    align-items: center; 
-    position: relative; 
-    gap: 20px;
-}
-
-.carousel-inner-view { 
-    display: flex; 
-    overflow-x: auto; 
-    gap: 35px; 
-    scroll-behavior: smooth; 
-    scrollbar-width: none; 
-    width: 100%; 
-    padding: 30px 0; 
-}
-
+.carousel-outer-wrapper { display: flex; align-items: center; position: relative; gap: 20px; overflow: hidden; }
+.carousel-inner-view { display: flex; overflow-x: auto; gap: 35px; scroll-behavior: smooth; scrollbar-width: none; padding: 30px 0; }
 .carousel-inner-view::-webkit-scrollbar { display: none; }
 
-.logo-box-card { 
-    flex: 0 0 290px; 
-    padding: 35px; 
-    border: 1px solid #f0f2f5; 
-    border-radius: 18px; 
-    background: #fff; 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.logo-box-card img { 
-    max-width: 100%; 
-    filter: grayscale(1); 
-    opacity: 0.6; 
-    transition: 0.4s; 
-}
-
+.logo-box-card { flex: 0 0 290px; padding: 35px; border: 1px solid #f0f2f5; border-radius: 18px; background: #fff; display: flex; align-items: center; justify-content: center; }
+.logo-box-card img { max-width: 100%; filter: grayscale(1); opacity: 0.6; transition: 0.4s; }
 .logo-box-card:hover img { filter: grayscale(0); opacity: 1; transform: scale(1.08); }
 
-/* 6. CLIENT BRAND GRID */
-.brand-identity-grid { 
-    display: grid; 
-    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); 
-    gap: 22px; 
-    margin-top: 45px; 
-}
+.carousel-nav-btn { background: #f0f0f0; border: none; width: 45px; height: 45px; border-radius: 50%; cursor: pointer; }
 
-.brand-cell { 
-    background: #f8fbff; 
-    padding: 26px; 
-    border-radius: 15px; 
-    font-weight: 800; 
-    color: #334; 
-    border-bottom: 6px solid #eee; 
-    text-align: center; 
-    transition: 0.3s;
-}
+/* 6. BRANDING COLOR GRID */
+.brand-identity-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 22px; margin-top: 45px; }
+.brand-cell { background: #f8fbff; padding: 26px; border-radius: 15px; font-weight: 800; color: #334; border-bottom: 6px solid #eee; text-align: center; }
 
 .c-delhivery { border-color: #ff6a00; color: #ff6a00; }
 .c-sugna { border-color: var(--brand-crimson); color: var(--brand-crimson); }
 
-/* 7. SERVICES GRID ENGINE */
-.services-master-grid { 
-    display: grid; 
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
-    gap: 40px; 
-}
-
-.service-feature-card { 
-    background: #fff; 
-    padding: 50px 38px; 
-    border-radius: 25px; 
-    text-align: center; 
-    box-shadow: 0 20px 50px rgba(0,0,0,0.06); 
-    transition: 0.45s ease;
-    border-top: 4px solid transparent;
-}
-
-.service-feature-card:hover { 
-    transform: translateY(-15px); 
-    border-top-color: var(--primary-blue);
-    box-shadow: 0 30px 60px rgba(0,0,0,0.12); 
-}
-
+/* 7. SERVICES MASTER GRID ENGINE */
+.services-master-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
+.service-feature-card { background: #fff; padding: 50px 38px; border-radius: 25px; text-align: center; box-shadow: 0 20px 50px rgba(0,0,0,0.06); color: #000; }
 .service-feature-card i { font-size: 50px; color: var(--primary-blue); margin-bottom: 28px; }
 
-/* 8. ENQUIRY FORM SYSTEM */
-.enquiry-form-grid { 
-    display: grid; 
-    grid-template-columns: 1fr 1fr; 
-    gap: 50px; 
-}
+/* 8. ENQUIRY SYSTEM */
+.enquiry-form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; }
+.enquiry-card-wrapper { background: #fff2f2; padding: 50px; border-radius: 30px; box-shadow: 0 10px 30px rgba(230, 30, 37, 0.05); }
+.enquiry-card-title { color: var(--vibrant-red-cta); font-size: 24px; font-weight: 800; text-align: center; margin-bottom: 30px; }
 
-.enquiry-card-wrapper { 
-    background: #fff2f2; 
-    padding: 50px; 
-    border-radius: 30px; 
-    box-shadow: 0 10px 30px rgba(230, 30, 37, 0.05); 
-}
-
-.enquiry-card-title { 
-    color: var(--vibrant-red-cta); 
-    font-size: 24px; 
-    font-weight: 800; 
-    text-align: center; 
-    margin-bottom: 30px; 
-}
-
-.enquiry-submit-btn { 
-    background: var(--vibrant-red-cta); 
-    color: #fff; 
-    border: none; 
-    padding: 20px; 
-    border-radius: 12px; 
-    width: 100%; 
-    font-weight: 800; 
-    cursor: pointer; 
-    transition: 0.3s;
-}
+.enquiry-submit-btn { background: var(--vibrant-red-cta); color: #fff; border: none; padding: 20px; border-radius: 12px; width: 100%; font-weight: 800; cursor: pointer; }
 
 /* 9. REPAIRED FOOTER SYSTEM */
-.main-footer-repaired { 
-    background: var(--footer-teal-dark); 
-    padding: 100px 0 45px; 
-    border-top: 6px solid var(--brand-crimson); 
-}
-
-.footer-layout-grid { 
-    display: grid; 
-    grid-template-columns: 1.6fr 0.8fr 0.8fr 1.3fr; 
-    gap: 65px; 
-}
-
+.main-footer-repaired { background: var(--footer-teal-dark); padding: 100px 0 45px; border-top: 6px solid var(--brand-crimson); }
+.footer-layout-grid { display: grid; grid-template-columns: 1.6fr 0.8fr 0.8fr 1.3fr; gap: 65px; }
 .footer-logo { height: 45px; background: #fff; border-radius: 6px; padding: 6px; margin-bottom: 30px; }
-.footer-nav-col h4 { 
-    color: #fff; 
-    margin-bottom: 30px; 
-    border-bottom: 3px solid var(--brand-crimson); 
-    display: inline-block; 
-    font-size: 17px; 
-}
 
+.footer-nav-col h4 { color: #fff; margin-bottom: 30px; border-bottom: 3px solid var(--brand-crimson); display: inline-block; }
 .footer-links-list { list-style: none; }
-.footer-links-list a { color: #ccd; text-decoration: none; line-height: 2.5; font-size: 15px; transition: 0.2s; }
-.footer-links-list a:hover { color: var(--brand-crimson); }
+.footer-links-list a { color: #ccd; text-decoration: none; line-height: 2.5; font-size: 15px; }
 
-/* 10. FIXED FLOATING ACTIONS */
+/* 10. FLOATING SYSTEM */
 .fixed-contact-float { position: fixed; bottom: 45px; left: 45px; display: flex; flex-direction: column; gap: 20px; z-index: 9999; }
-.float-action-btn { 
-    width: 65px; 
-    height: 65px; 
-    border-radius: 50%; 
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
-    color: #fff; 
-    font-size: 28px; 
-    box-shadow: 0 15px 35px rgba(0,0,0,0.4); 
-    transition: 0.35s ease;
-}
+.float-action-btn { width: 65px; height: 65px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 28px; box-shadow: 0 15px 35px rgba(0,0,0,0.4); }
 
 .phone-style { background: #f59e0b; }
 .wa-style { background: #25d366; }
 
-/* 11. RESPONSIVE REPAIRS */
+/* 11. MOBILE COMPATIBILITY BREAKPOINTS */
 @media (max-width: 1024px) {
-    .hero-layout-grid { grid-template-columns: 1fr; gap: 45px; }
-    .hero-content-block h1 { font-size: 44px; text-align: center; }
-    .enquiry-form-grid { grid-template-columns: 1fr; }
-    .footer-layout-grid { grid-template-columns: 1fr; gap: 40px; }
-    .nav-links { 
-        display: none; 
-        flex-direction: column; 
-        position: absolute; 
-        top: 85px; 
-        left: 0; 
-        width: 100%; 
-        background: var(--navy-dark-bg); 
-        padding: 50px; 
-        border-bottom: 5px solid var(--accent-sky); 
-    }
+    .hero-layout-grid { grid-template-columns: 1fr; gap: 45px; text-align: center; }
+    .hero-content-block h1 { font-size: 44px; }
+    .trust-indicators-grid { justify-content: center; }
+    .booking-portal { margin: 0 auto; max-width: 100%; }
+
+    .menu-toggle { display: block; color: #fff; }
+    .nav-links { display: none; position: absolute; top: 85px; left: 0; width: 100%; background: var(--navy-dark-bg); flex-direction: column; padding: 50px 0; border-bottom: 5px solid var(--accent-sky); }
     .nav-links.active { display: flex; }
+
+    .services-master-grid, .enquiry-form-grid, .footer-layout-grid { grid-template-columns: 1fr; gap: 40px; }
+    .section-container { padding: 0 7%; }
 }
 
-/* 12. ANIMATION CORE */
-.animate { opacity: 0; transform: translateY(45px); transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1); }
+/* 12. SCROLL REPAIR */
+.animate { opacity: 0; transform: translateY(45px); transition: 0.8s ease-out; }
 .animate.show { opacity: 1; transform: translateY(0); }
