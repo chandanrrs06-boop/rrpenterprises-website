@@ -19,6 +19,11 @@
                     <span class="brand-tag">INTEGRATED LOGISTICS</span>
                 </div>
             </div>
+            
+            <div class="menu-toggle" id="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+
             <div class="nav-links">
                 <a href="#about">About Us</a>
                 <a href="#services">Services</a>
@@ -133,11 +138,7 @@
                 </div>
                 <div class="vm-card">
                     <h3>Our Mission</h3>
-                    <ul>
-                        <li>Deliver safe, timely, and cost-effective solutions.</li>
-                        <li>Build long-term partnerships through transparency.</li>
-                        <li>Leverage technology and innovation for superior visibility.</li>
-                    </ul>
+                    <p>To deliver safe, timely, and cost-effective solutions.</p>
                 </div>
             </div>
             <div class="why-us-box">
@@ -241,6 +242,38 @@
         <a href="tel:+918152055195" class="float-btn phone-btn"><i class="fas fa-phone"></i></a>
         <a href="https://wa.me/918152055195" class="float-btn wa-btn"><i class="fab fa-whatsapp"></i></a>
     </div>
+
+    <script>
+        // Toggle Mobile Menu
+        const menuToggle = document.getElementById('mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            // Change icon from Bars to X when active
+            const icon = menuToggle.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+
+        // Close menu when a link is clicked
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                const icon = menuToggle.querySelector('i');
+                icon.classList.add('fa-bars');
+                icon.classList.remove('fa-times');
+            });
+        });
+
+        // Simple Form Submission Feedback
+        const forms = document.querySelectorAll('form');
+        forms.forEach(form => {
+            form.addEventListener('submit', () => {
+                alert("Thank you! Your enquiry has been sent to RRP Enterprises. We will contact you shortly.");
+            });
+        });
+    </script>
 
 </body>
 </html>
