@@ -12,17 +12,23 @@
 * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; }
 body { background: var(--bg-dark); color: var(--white); overflow-x: hidden; scroll-behavior: smooth; }
 
+/* Animations */
+@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes logoScroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+.fade-in { animation: fadeIn 0.8s ease-out forwards; }
+.scale-up { animation: fadeIn 0.6s ease-out backwards; }
+
 /* Fixed Navigation */
 .main-nav { position: fixed; top: 0; width: 100%; z-index: 1000; background: rgba(0, 11, 29, 0.95); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255,255,255,0.1); padding: 12px 0; }
 .nav-container { display: flex; justify-content: space-between; align-items: center; padding: 0 5%; max-width: 1400px; margin: 0 auto; }
 .brand-identity { display: flex; align-items: center; gap: 10px; }
 .nav-logo { height: 40px; background: #fff; border-radius: 4px; padding: 2px; }
 .brand-main { font-weight: 800; font-size: 16px; }
-.brand-tag { font-size: 8px; color: var(--accent); font-weight: 700; display: block; }
+.brand-tag { font-size: 9px; font-weight: 700; color: var(--accent); display: block; }
 .nav-links a { color: #fff; text-decoration: none; font-size: 13px; font-weight: 600; margin-left: 15px; }
 .nav-cta { background: #fff; color: #000 !important; padding: 8px 16px; border-radius: 50px; text-decoration: none; font-weight: 700; }
 
-/* Hero Section */
+/* Constructive Hero Layout */
 .hero-section { min-height: 100vh; padding: 120px 5% 60px; display: flex; align-items: center; position: relative; }
 .hero-overlay { position: absolute; inset: 0; background: radial-gradient(circle at 70% 30%, rgba(0, 74, 153, 0.2), transparent 60%); z-index: -1; }
 .content-wrapper { display: grid; grid-template-columns: 1fr; gap: 40px; width: 100%; max-width: 1400px; margin: 0 auto; }
@@ -34,43 +40,40 @@ h1 span { color: var(--accent); }
 /* Booking Card */
 .booking-portal { background: #fff; color: #000; border-radius: 20px; padding: 25px; width: 100%; max-width: 480px; margin: 0 auto; box-shadow: 0 40px 100px rgba(0,0,0,0.5); }
 .booking-header { border-bottom: 2px solid var(--primary); margin-bottom: 20px; padding-bottom: 10px; }
-.booking-header h3 { color: var(--primary); font-size: 18px; font-weight: 800; }
+.booking-header h3 { color: var(--primary); font-size: 18px; font-weight: 800; text-transform: uppercase; }
 .input-field { margin-bottom: 12px; text-align: left; }
 .input-field label { font-size: 10px; font-weight: 800; color: #999; display: block; margin-bottom: 4px; }
 .input-field input, textarea { width: 100%; padding: 12px; border: 1px solid #eee; border-radius: 8px; background: #f8fafc; font-size: 14px; outline: none; }
 .dual-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
 .primary-btn { width: 100%; padding: 16px; background: #000; color: #fff; border: none; border-radius: 10px; font-weight: 800; cursor: pointer; margin-top: 10px; }
 
-/* Iconic Marquee */
+/* Iconic Logo Marquee */
 .clients-section { background: #fff; padding: 60px 0; border-bottom: 1px solid #eee; overflow: hidden; }
 .marquee-title-box { text-align: center; margin-bottom: 30px; }
 .marquee-label { color: #999; font-size: 12px; font-weight: 800; letter-spacing: 4px; }
 .marquee-container { width: 100%; overflow: hidden; position: relative; }
-.marquee-content { display: flex; width: max-content; animation: iconScroll 25s linear infinite; }
-.client-name { color: #ddd; font-size: clamp(20px, 4vw, 32px); font-weight: 800; text-transform: uppercase; padding: 0 40px; white-space: nowrap; }
-@keyframes iconScroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+.marquee-content { display: flex; width: max-content; animation: logoScroll 25s linear infinite; align-items: center; }
+.client-logo { height: 45px; width: auto; margin: 0 45px; filter: grayscale(100%); opacity: 0.7; transition: 0.3s; }
+.client-logo:hover { filter: grayscale(0%); opacity: 1; transform: scale(1.1); }
 
-/* Services Section */
+/* Service Section */
 .service-bar { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; padding: 60px 5%; background: rgba(255,255,255,0.03); text-align: center; }
 .bar-item i { font-size: 32px; color: var(--accent); margin-bottom: 12px; display: block; }
 
-/* About & Enquiry Section */
-.about-section { padding: 80px 5%; background: #fff; color: #000; text-align: center; }
-.vm-container { display: grid; grid-template-columns: 1fr; gap: 25px; margin-top: 30px; max-width: 1000px; margin: 0 auto; }
-.vm-card { background: #f8fafc; padding: 25px; border-radius: 15px; border-left: 4px solid var(--primary); text-align: left; }
-
+/* Enquiry Section */
 .enquiry-section { padding: 80px 5%; background: #f4f7fa; color: #000; }
 .enquiry-container { display: grid; grid-template-columns: 1fr; gap: 30px; max-width: 1200px; margin: 0 auto; }
 .enquiry-box { background: #fff; padding: 30px; border-radius: 20px; border: 1px solid #eee; }
 .red-title { color: var(--red); font-weight: 800; margin-bottom: 15px; }
 .submit-red { background: var(--red); color: #fff; border: none; width: 100%; padding: 15px; border-radius: 8px; font-weight: 800; cursor: pointer; margin-top: 15px; }
 
-/* Footer Alignment */
+/* Full Footer */
 .main-footer { background: var(--footer-teal); padding: 60px 5% 0; }
 .footer-grid { display: grid; grid-template-columns: 1fr; gap: 40px; max-width: 1200px; margin: 0 auto; padding-bottom: 40px; }
 .footer-logo { height: 35px; background: #fff; border-radius: 4px; padding: 2px; margin-bottom: 20px; }
 .footer-quicklinks ul { list-style: none; }
 .footer-quicklinks a { color: #ccc; text-decoration: none; font-size: 14px; line-height: 2.5; }
+.footer-contact p { font-size: 14px; color: #ccc; margin-bottom: 12px; }
 .footer-bottom { text-align: center; padding: 25px; border-top: 1px solid rgba(255,255,255,0.05); font-size: 11px; }
 
 /* Responsive Media Queries */
