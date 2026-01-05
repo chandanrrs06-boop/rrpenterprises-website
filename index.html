@@ -22,7 +22,7 @@
             <div class="nav-links">
                 <a href="#about">About Us</a>
                 <a href="#services">Services</a>
-                <a href="#why-us">Why Us</a>
+                <a href="#why-us">Why Choose Us</a>
                 <a href="#enquiry" class="nav-cta">Enquiry</a>
             </div>
         </div>
@@ -41,7 +41,7 @@
                 </div>
             </div>
 
-            <div class="booking-portal scale-up">
+            <div class="booking-portal scale-up" id="booking">
                 <div class="booking-header"><h3>Instant FTL Inquiry</h3></div>
                 <form action="https://formspree.io/f/mpqwlvba" method="POST" class="booking-form">
                     <input type="hidden" name="Inquiry_Type" value="Full Truck (FTL)">
@@ -58,7 +58,10 @@
                             <div class="input-field"><label>DATE</label><input type="date" name="Date" required></div>
                             <div class="input-field"><label>MOBILE</label><input type="tel" name="Phone" placeholder="Mobile" required></div>
                         </div>
-                        <textarea name="Remarks" placeholder="Weight or Cargo details..." rows="2"></textarea>
+                        <div class="input-field">
+                            <label>REMARKS</label>
+                            <textarea name="Remarks" placeholder="Weight or Cargo details..." rows="2"></textarea>
+                        </div>
                     </div>
                     <button type="submit" class="primary-btn">GENERATE INSTANT QUOTE <i class="fas fa-arrow-right"></i></button>
                 </form>
@@ -66,9 +69,24 @@
         </div>
     </main>
 
+    <section class="branding-bar">
+        <div class="section-container">
+            <p class="branding-label">TRUSTED BY INDUSTRY LEADERS</p>
+            <div class="iconic-grid">
+                <span class="client-box c-sugna">SUGNA SPONGE & POWER</span>
+                <span class="client-box c-metals">SUGNA METALS</span>
+                <span class="client-box c-papers">BINJUSARIA PAPERS</span>
+                <span class="client-box c-buildtek">NCL BUILDTEK</span>
+                <span class="client-box c-dhl">DHL</span>
+                <span class="client-box c-accpree">ACCPREE ENGINEERING</span>
+                <span class="client-box c-delhivery">DELHIVERY</span>
+            </div>
+        </div>
+    </section>
+
     <section id="about" class="about-section">
         <div class="section-container">
-            <h2 class="section-title dark">Powering Reliable Logistics Across India</h2>
+            <h2 class="section-title dark">Reliable Logistics Across India</h2>
             <div class="full-matter">
                 <p>In today’s fast-moving business environment, logistics is no longer just about transporting goods—it is about speed, reliability, visibility, and partnership. At RRP ENTERPRISES, we understand this responsibility deeply. As a diversified logistics company in India, we are proud to be a trusted name in the domestic B2B road transportation segment, delivering end-to-end logistics solutions that keep businesses moving forward.</p>
                 
@@ -81,33 +99,13 @@
 
     <section id="services" class="services-overview">
         <div class="section-container">
-            <h2 class="section-title dark">Comprehensive Logistics Solutions</h2>
+            <h2 class="section-title">Comprehensive Logistics Solutions</h2>
             <div class="services-grid">
-                <div class="service-card">
-                    <i class="fas fa-truck-moving"></i>
-                    <h3>Full Truck Load (FTL)</h3>
-                    <p>Dedicated vehicles offering faster transit times, reduced handling risks, and cost efficiency for bulk movements.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-road"></i>
-                    <h3>Domestic Road Transportation</h3>
-                    <p>Reliable pan-India road transportation services ensuring on-time deliveries and safe handling.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-project-diagram"></i>
-                    <h3>Project Logistics</h3>
-                    <p>Precise handling of complex projects, including heavy, oversized, or time-critical consignments.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-globe"></i>
-                    <h3>Freight Forwarding</h3>
-                    <p>Simplifying cargo movement with seamless coordination, compliance, and documentation support.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-warehouse"></i>
-                    <h3>Warehousing & Distribution</h3>
-                    <p>Flexible solutions to optimize inventory, reduce turnaround times, and improve last-mile efficiency.</p>
-                </div>
+                <div class="service-card"><i class="fas fa-truck-moving"></i><h3>Full Truck Load (FTL)</h3><p>Dedicated vehicles for your cargo, offering faster transit times and reduced handling risks.</p></div>
+                <div class="service-card"><i class="fas fa-road"></i><h3>Domestic Road Transportation</h3><p>Strong road network providing reliable pan-India services ensuring on-time deliveries.</p></div>
+                <div class="service-card"><i class="fas fa-project-diagram"></i><h3>Project Logistics</h3><p>Handling large-scale projects including planning and coordination for oversized consignments.</p></div>
+                <div class="service-card"><i class="fas fa-globe"></i><h3>Freight Forwarding</h3><p>Simplifying cargo movement with seamless coordination, compliance, and documentation support.</p></div>
+                <div class="service-card"><i class="fas fa-warehouse"></i><h3>Warehousing & Distribution</h3><p>Flexible solutions that help businesses optimize inventory and reduce turnaround times.</p></div>
             </div>
         </div>
     </section>
@@ -116,11 +114,11 @@
         <div class="section-container">
             <div class="matter-box">
                 <h2>Logistics Driven by Technology</h2>
-                <p>We leverage modern logistics tools to provide real-time shipment tracking, end-to-end visibility, operational transparency, and data-driven decision making. This technology-led approach enables our customers to reduce costs and improve efficiency.</p>
+                <p>At RRP ENTERPRISES, technology is at the core of our operations. We leverage modern tools to provide real-time shipment tracking, end-to-end visibility, operational transparency, and data-driven decision making. This enables our customers to reduce costs and meet delivery commitments with absolute confidence.</p>
             </div>
             <div class="matter-box">
                 <h2>A Partnership for Growth</h2>
-                <p>We believe logistics is a long-term partnership. Our team works closely with customers to understand their business challenges and design solutions that align with their operational goals.</p>
+                <p>We believe logistics is not just a service—it is a long-term partnership. Our team works closely with customers to understand their business challenges and design solutions that align with their operational goals.</p>
             </div>
         </div>
     </section>
@@ -135,47 +133,68 @@
                 <div class="vm-card">
                     <h3>Our Mission</h3>
                     <ul>
-                        <li>Deliver safe, timely, and cost-effective solutions.</li>
-                        <li>Build long-term partnerships through reliability.</li>
-                        <li>Leverage technology for superior visibility and control.</li>
-                        <li>Empower customers with scalable support.</li>
+                        <li>Deliver safe, timely, and cost-effective logistics solutions.</li>
+                        <li>Build long-term partnerships through reliability and transparency.</li>
+                        <li>Leverage technology and innovation for superior visibility and control.</li>
+                        <li>Empower customers with flexible and scalable logistics support.</li>
                     </ul>
                 </div>
             </div>
-
             <div class="why-us-box">
                 <h2>Why Choose RRP ENTERPRISES?</h2>
                 <div class="checklist-grid">
-                    <span><i class="fas fa-check"></i> Proven B2B expertise</span>
-                    <span><i class="fas fa-check"></i> Strong road network</span>
-                    <span><i class="fas fa-check"></i> Tech-enabled operations</span>
+                    <span><i class="fas fa-check"></i> Proven expertise in B2B logistics</span>
+                    <span><i class="fas fa-check"></i> Strong domestic road transportation network</span>
+                    <span><i class="fas fa-check"></i> Technology-enabled operations</span>
                     <span><i class="fas fa-check"></i> Customer-focused approach</span>
+                    <span><i class="fas fa-check"></i> Reliable execution and transparent processes</span>
                 </div>
-            </div>
-
-            <h2 class="section-title dark" style="margin-top:60px;">Trusted By Leading Brands</h2>
-            <div class="iconic-grid">
-                <span class="client-box c-delhivery">DELHIVERY</span>
-                <span class="client-box c-darcl">CJ DARCL</span>
-                <span class="client-box c-sugna">SUGNA SPONGE</span>
-                <span class="client-box c-metals">SUGNA METALS</span>
-                <span class="client-box c-papers">BINJUSARIA</span>
-                <span class="client-box c-buildtek">NCL BUILDTEK</span>
-                <span class="client-box c-dhl">DHL</span>
-                <span class="client-box c-accpree">ACCPREE ENG.</span>
             </div>
         </div>
     </section>
 
     <section id="enquiry" class="enquiry-section">
-        <div class="enquiry-container">
-            <div class="enquiry-box">
-                <h3 class="red-title">BUSINESS ENQUIRY</h3>
-                <form action="https://formspree.io/f/mpqwlvba" method="POST">
-                    <input type="text" name="Company" placeholder="Company Name" required>
-                    <div class="dual-row"><input type="tel" name="Phone" placeholder="Phone" required><input type="email" name="Email" placeholder="Email" required></div>
-                    <button type="submit" class="submit-red">Submit Enquiry</button>
-                </form>
+        <div class="section-container">
+            <div class="enquiry-grid">
+                <div class="enquiry-card">
+                    <h3 class="red-head">VENDOR ENQUIRY</h3>
+                    <form action="https://formspree.io/f/mpqwlvba" method="POST">
+                        <input type="text" name="Vendor_Name" placeholder="Vendor name" required>
+                        <div class="dual-row">
+                            <input type="email" name="Email" placeholder="Email id" required>
+                            <input type="tel" name="Phone" placeholder="Phone No" required>
+                        </div>
+                        <input type="text" name="Fleet_Type" placeholder="Fleet Type">
+                        <input type="text" name="City" placeholder="City">
+                        <textarea name="Description" placeholder="Description" rows="3"></textarea>
+                        <button type="submit" class="red-btn">Submit</button>
+                    </form>
+                </div>
+
+                <div class="enquiry-card">
+                    <h3 class="red-head">BUSINESS ENQUIRY</h3>
+                    <form action="https://formspree.io/f/mpqwlvba" method="POST">
+                        <input type="text" name="Company_Name" placeholder="Company Name" required>
+                        <div class="dual-row">
+                            <input type="text" name="First_Name" placeholder="First Name">
+                            <input type="text" name="Last_Name" placeholder="Last Name">
+                        </div>
+                        <div class="dual-row">
+                            <input type="tel" name="Phone" placeholder="Phone Number" required>
+                            <input type="email" name="Email" placeholder="Email id" required>
+                        </div>
+                        <div class="dual-row">
+                            <select name="Service_Type">
+                                <option value="Trucking">Trucking - Long Haul</option>
+                                <option value="Warehousing">Warehousing</option>
+                                <option value="FTL">Full Truck Load</option>
+                            </select>
+                            <input type="text" name="GST_No" placeholder="GST No">
+                        </div>
+                        <textarea name="Description" placeholder="Description" rows="3"></textarea>
+                        <button type="submit" class="red-btn">Submit</button>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
@@ -185,15 +204,17 @@
             <div class="footer-brand">
                 <img src="assets/logo.png" alt="RRP" class="footer-logo">
                 <p>Let’s Move Your Business Forward.</p>
-                <p><i class="fas fa-map-marker-alt"></i> Anantapur, AP - 515001</p>
+                <p><i class="fas fa-map-marker-alt"></i> Anantapur, Andhra Pradesh - 515001</p>
             </div>
             <div class="footer-contact">
                 <h4>Contact Details</h4>
-                <p>+91 8152055195</p>
-                <p>support@rrpenterprises.co.in</p>
+                <p><i class="fas fa-phone"></i> +91 8152055195</p>
+                <p><i class="fas fa-envelope"></i> support@rrpenterprises.co.in</p>
+                <p><i class="fab fa-whatsapp" style="color:#25d366"></i> Chat on WhatsApp</p>
             </div>
         </div>
-        <div class="footer-bottom">&copy; 2026 RRP Enterprises. Partner with where logistics meets trust.</div>
+        <div class="footer-bottom">&copy; 2026 RRP Enterprises. All Rights Reserved.</div>
     </footer>
+
 </body>
 </html>
