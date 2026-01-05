@@ -9,7 +9,7 @@
     <meta name="description" content="RRP Enterprises is a trusted pan-India B2B logistics company offering Full Truck Load, road transportation, project logistics and warehousing solutions.">
     <meta name="keywords" content="RRP Enterprises, logistics company india, FTL transport, B2B logistics, road transportation">
 
-    <link rel="stylesheet" href="style.css?v=3.6">
+    <link rel="stylesheet" href="style.css?v=4.1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -48,7 +48,7 @@
             <div class="hero-text">
                 <span class="startup-badge">STARTUP INDIA RECOGNIZED</span>
                 <h1>RRP ENTERPRISES – <br><span>Powering Reliable Logistics</span></h1>
-                <p>In today’s fast-moving business environment, logistics is no longer just about transporting goods—it is about speed, reliability, visibility, and partnership.</p>
+                <p>Delivering speed, reliability, visibility, and long-term logistics partnerships for modern businesses across India.</p>
 
                 <div class="trust-indicators">
                     <div class="stat-item">
@@ -62,7 +62,7 @@
                 </div>
             </div>
 
-            <div class="booking-portal animate" id="booking">
+            <div class="booking-portal scale-up" id="booking">
                 <div class="booking-header">
                     <h3>Instant FTL Inquiry</h3>
                 </div>
@@ -109,8 +109,8 @@
     <div class="section-container">
         <h2 class="carousel-title">OUR ESTEEMED CLIENT</h2>
         <div class="carousel-wrapper">
-            <button class="carousel-nav prev"><i class="fas fa-chevron-left"></i></button>
-            <div class="carousel-grid">
+            <button class="carousel-nav prev" id="prevBtn"><i class="fas fa-chevron-left"></i></button>
+            <div class="carousel-scroll-container" id="carouselContainer">
                 <div class="client-logo-card"><img src="assets/maersk.png" alt="Maersk"></div>
                 <div class="client-logo-card"><img src="assets/nxt.png" alt="NXT Group"></div>
                 <div class="client-logo-card"><img src="assets/cwc.png" alt="CWC"></div>
@@ -119,22 +119,30 @@
                 <div class="client-logo-card"><img src="assets/cci.png" alt="CCI"></div>
                 <div class="client-logo-card"><img src="assets/ninjacart.png" alt="Ninjacart"></div>
                 <div class="client-logo-card"><img src="assets/amazon.png" alt="Amazon"></div>
+                <div class="client-logo-card"><img src="assets/fast-logistics.png" alt="Fast Logistics"></div>
+                <div class="client-logo-card"><img src="assets/bombax.png" alt="Bombax"></div>
+                <div class="client-logo-card"><img src="assets/leghorn.png" alt="LeghornGroup"></div>
+                <div class="client-logo-card"><img src="assets/forin.png" alt="Forin"></div>
             </div>
-            <button class="carousel-nav next"><i class="fas fa-chevron-right"></i></button>
+            <button class="carousel-nav next" id="nextBtn"><i class="fas fa-chevron-right"></i></button>
         </div>
-    </section>
+        <div class="carousel-dots">
+            <span class="dot active"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span>
+        </div>
+    </div>
+</section>
 
 <section class="branding-bar animate">
     <div class="section-container">
         <p class="branding-label">TRUSTED BY LEADING BRANDS</p>
         <div class="iconic-grid">
-            <div class="client-box c-sugna">SUGNA SPONGE & POWER</div>
+            <div class="client-box c-maersk">MAERSK</div>
+            <div class="client-box c-sugna">SUGNA SPONGE</div>
             <div class="client-box c-metals">SUGNA METALS</div>
-            <div class="client-box">BINJUSARIA PAPERS</div>
-            <div class="client-box">NCL BUILDTEK</div>
-            <div class="client-box">DHL</div>
-            <div class="client-box">ACCPREE ENGINEERING</div>
-            <div class="client-box">DELHIVERY</div>
+            <div class="client-box c-delhivery">DELHIVERY</div>
+            <div class="client-box c-amazon">AMAZON</div>
+            <div class="client-box c-dhl">DHL</div>
+            <div class="client-box c-cci">CCI</div>
         </div>
     </div>
 </section>
@@ -156,11 +164,11 @@
     <div class="section-container">
         <h2 class="section-title">Comprehensive Logistics Solutions</h2>
         <div class="services-grid">
-            <div class="service-card"><i class="fas fa-truck-moving"></i><h3>Full Truck Load (FTL)</h3><p>Dedicated vehicles for your cargo, offering faster transit times, reduced handling risks, and cost efficiency for bulk movements.</p></div>
-            <div class="service-card"><i class="fas fa-road"></i><h3>Domestic Road Transportation</h3><p>With a strong road network and experienced operations team, we provide reliable pan-India road transportation services.</p></div>
-            <div class="service-card"><i class="fas fa-project-diagram"></i><h3>Project Logistics</h3><p>We manage complex and large-scale logistics projects with precision—handling planning, execution, and coordination.</p></div>
-            <div class="service-card"><i class="fas fa-globe"></i><h3>Freight Forwarding</h3><p>Our freight forwarding solutions simplify cargo movement with seamless coordination, compliance, and documentation support.</p></div>
-            <div class="service-card"><i class="fas fa-warehouse"></i><h3>Warehousing & Distribution</h3><p>We offer flexible warehousing and distribution solutions that help businesses optimize inventory and improve last-mile efficiency.</p></div>
+            <div class="service-card"><i class="fas fa-truck-moving"></i><h3>Full Truck Load (FTL)</h3><p>Dedicated vehicles for your cargo, offering faster transit times and reduced handling risks.</p></div>
+            <div class="service-card"><i class="fas fa-road"></i><h3>Domestic Road Transportation</h3><p>Strong road network providing reliable pan-India road transportation services ensure on-time deliveries.</p></div>
+            <div class="service-card"><i class="fas fa-project-diagram"></i><h3>Project Logistics</h3><p>Handling large-scale projects including planning and coordination for oversized or time-critical consignments.</p></div>
+            <div class="service-card"><i class="fas fa-globe"></i><h3>Freight Forwarding</h3><p>Simplifying cargo movement with seamless coordination, compliance, and documentation support.</p></div>
+            <div class="service-card"><i class="fas fa-warehouse"></i><h3>Warehousing & Distribution</h3><p>Flexible warehousing and distribution solutions that help businesses optimize inventory and turnaround times.</p></div>
         </div>
     </div>
 </section>
@@ -169,42 +177,11 @@
     <div class="section-container">
         <div class="matter-box">
             <h2>Logistics Driven by Technology</h2>
-            <p>At RRP ENTERPRISES, technology is at the core of our operations. We leverage modern logistics tools to provide real-time shipment tracking, end-to-end visibility, operational transparency, and data-driven decision making. This technology-led approach enables our customers to reduce costs, improve efficiency, and meet delivery commitments with confidence.</p>
+            <p>At RRP ENTERPRISES, technology is at the core of our operations. We leverage modern logistics tools to provide real-time shipment tracking, end-to-end visibility, operational transparency, and data-driven decision making. This enables our customers to reduce costs, improve efficiency, and meet delivery commitments with confidence.</p>
         </div>
         <div class="matter-box">
-            <h2>More Than Logistics – A Partnership for Growth</h2>
-            <p>We believe logistics is not just a service—it is a long-term partnership. Our team works closely with customers to understand their business challenges and design solutions that align with their operational goals. By combining reliable execution and customized service models, we help our clients focus on growth.</p>
-        </div>
-    </div>
-</section>
-
-<section id="why-us" class="why-choose-section animate">
-    <div class="section-container">
-        <div class="vm-grid">
-            <div class="vm-card">
-                <h3>Our Vision</h3>
-                <p>To become the most trusted and technology-led logistics partner in India, enabling seamless movement of goods and supporting the growth of our customers across industries.</p>
-            </div>
-            <div class="vm-card">
-                <h3>Our Mission</h3>
-                <ul>
-                    <li>To deliver safe, timely, and cost-effective logistics solutions.</li>
-                    <li>To build long-term partnerships through reliability and transparency.</li>
-                    <li>To leverage technology and innovation for superior visibility and control.</li>
-                    <li>To empower customers with flexible and scalable logistics support.</li>
-                    <li>To uphold high standards of service excellence for customers and partners.</li>
-                </ul>
-            </div>
-        </div>
-        <div class="why-us-box">
-            <h2>Why Choose RRP ENTERPRISES?</h2>
-            <div class="checklist-grid">
-                <span><i class="fas fa-check"></i> Proven expertise in B2B logistics</span>
-                <span><i class="fas fa-check"></i> Strong domestic road transportation network</span>
-                <span><i class="fas fa-check"></i> Technology-enabled operations</span>
-                <span><i class="fas fa-check"></i> Customer-focused approach</span>
-                <span><i class="fas fa-check"></i> Reliable execution and transparent processes</span>
-            </div>
+            <h2>A Partnership for Growth</h2>
+            <p>We believe logistics is not just a service—it is a long-term partnership. Our team works closely with customers to understand their business challenges and design solutions that align with their operational goals.</p>
         </div>
     </div>
 </section>
@@ -215,7 +192,7 @@
             <div class="enquiry-card">
                 <h3 class="red-head">VENDOR ENQUIRY</h3>
                 <form action="https://formspree.io/f/mpqwlvba" method="POST">
-                    <input type="text" name="Vendor_Name" placeholder="Vendor Name" required>
+                    <input type="text" name="Vendor_Name" placeholder="Vendor name" required>
                     <div class="dual-row">
                         <input type="email" name="Email" placeholder="Email id" required>
                         <input type="tel" name="Phone" placeholder="Phone No" required>
@@ -267,7 +244,7 @@
                 Opposite Sakshi office,<br>
                 Anantapur 515001</p>
                 <div class="footer-social-icons">
-                    <a href="https://www.linkedin.com/company/rrp-enterprises" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://linkedin.com/company/rrp-enterprises" target="_blank"><i class="fab fa-linkedin-in"></i></a>
                     <a href="https://wa.me/918152055195" target="_blank"><i class="fab fa-whatsapp"></i></a>
                     <a href="https://maps.app.goo.gl/hofLsJVkoLqk5BRg8?g_st=awb" target="_blank"><i class="fas fa-map-location-dot"></i></a>
                 </div>
@@ -294,7 +271,7 @@
                 <p><i class="fas fa-phone"></i> +91-8152055195</p>
                 <p><i class="fas fa-phone"></i> +91-8217212432</p>
                 <p><i class="fas fa-envelope"></i> contact@rrpenterprises.co.in</p>
-                <p><i class="fab fa-whatsapp"></i> Chat with us on Whatsapp</p>
+                <p><i class="fab fa-whatsapp"></i> Contact on Whatsapp</p>
             </div>
         </div>
         <div class="footer-bottom">© 2026 RRP Enterprises. All Rights Reserved.</div>
@@ -307,20 +284,23 @@
 </div>
 
 <script>
+// Mobile Menu
 const menuToggle = document.getElementById('mobile-menu');
 const navLinks = document.querySelector('.nav-links');
-
 menuToggle.addEventListener('click', () => {
     navLinks.classList.toggle('active');
-    const icon = menuToggle.querySelector('i');
-    icon.classList.toggle('fa-bars');
-    icon.classList.toggle('fa-times');
+    menuToggle.querySelector('i').classList.toggle('fa-bars');
+    menuToggle.querySelector('i').classList.toggle('fa-times');
 });
 
+// Carousel Scroll Logic
+const container = document.getElementById('carouselContainer');
+document.getElementById('nextBtn').onclick = () => container.scrollBy({ left: 300, behavior: 'smooth' });
+document.getElementById('prevBtn').onclick = () => container.scrollBy({ left: -300, behavior: 'smooth' });
+
+// Scroll Animation
 const observer = new IntersectionObserver(entries => {
-    entries.forEach(e => {
-        if(e.isIntersecting) { e.target.classList.add('show') }
-    });
+    entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('show'); });
 }, { threshold: .15 });
 document.querySelectorAll('.animate').forEach(el => observer.observe(el));
 </script>
