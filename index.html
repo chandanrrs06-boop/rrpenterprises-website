@@ -34,7 +34,7 @@
             <div class="hero-text fade-in">
                 <div class="startup-badge">STARTUP INDIA RECOGNIZED</div>
                 <h1>Empowering India's <br><span>Logistics Network</span></h1>
-                <p>Digital-first FTL & PTL solutions across 21,000+ Pincodes.</p>
+                <p>Digital-first FTL solutions across 21,000+ Pincodes.</p>
                 <div class="trust-indicators">
                     <div class="stat-item"><strong>20+ Lakh</strong><span>Verified Trucks</span></div>
                     <div class="stat-item"><strong>₹50 Lakh</strong><span>Trip Insurance</span></div>
@@ -42,12 +42,11 @@
             </div>
 
             <div class="booking-portal scale-up" id="booking">
-                <div class="tab-switcher">
-                    <button type="button" class="tab-btn active" onclick="switchTab(this, 'FTL')">Full Truck (FTL)</button>
-                    <button type="button" class="tab-btn" onclick="switchTab(this, 'PTL')">Part Load (PTL)</button>
+                <div class="booking-header">
+                    <h3>Full Truck (FTL) Booking</h3>
                 </div>
                 <form action="https://formspree.io/f/mpqwlvba" method="POST" class="booking-form">
-                    <input type="hidden" name="Inquiry_Type" id="serviceType" value="FTL">
+                    <input type="hidden" name="Inquiry_Type" value="Full Truck (FTL)">
                     <div class="form-body">
                         <div class="input-field">
                             <label><i class="fas fa-map-marker-alt" style="color:#27ae60"></i> LOADING POINT</label>
@@ -92,26 +91,22 @@
         <div class="section-container">
             <h2 class="section-title dark">About RRP Enterprises</h2>
             <div class="about-content">
-                <p><strong>RRP ENTERPRISES</strong> is a diversified logistics company and a leading player in the domestic B2B road transportation segment. We deliver reliable, end-to-end multimodal logistics solutions specifically engineered around our customers’ evolving supply chain needs. Our service portfolio includes high-capacity <strong>Full Truck Load (FTL)</strong>, complex project logistics, global freight forwarding, and integrated warehousing & distribution.</p>
-                <p>We believe logistics is more than moving cargo—it’s about keeping your business running smoothly. By utilizing technology-driven operations, we provide real-time visibility and scalable capacity that empowers our clients to reduce overhead, improve efficiency, and meet delivery commitments with absolute confidence.</p>
+                <p><strong>RRP ENTERPRISES</strong> is a diversified logistics company and a leading player in the domestic B2B road transportation segment. We deliver reliable multimodal logistics solutions designed around our customers’ needs.</p>
+                <p>We believe logistics is more than moving cargo—it’s about keeping our customers’ businesses running smoothly. With technology-driven operations, we provide real-time visibility and scalable capacity.</p>
             </div>
-            
-            
-            
             <div class="vm-container">
                 <div class="vm-card">
                     <i class="fas fa-eye"></i>
                     <h3>Our Vision</h3>
-                    <p>To become the most trusted and technology-led logistics partner in India. We aim to enable the seamless movement of goods while supporting the rapid growth of our customers across every major industry.</p>
+                    <p>To become a most trusted and technology-led logistics partner in India, enabling seamless movement of goods across industries.</p>
                 </div>
                 <div class="vm-card">
                     <i class="fas fa-bullseye"></i>
                     <h3>Our Mission</h3>
                     <ul>
                         <li>Deliver safe, timely, and cost-effective solutions.</li>
-                        <li>Build long-term partnerships through reliability and transparency.</li>
-                        <li>Leverage technology and innovation for better visibility and control.</li>
-                        <li>Empower customers with flexible and scalable support.</li>
+                        <li>Build long-term partnerships through reliability.</li>
+                        <li>Leverage technology for better visibility and control.</li>
                     </ul>
                 </div>
             </div>
@@ -164,13 +159,5 @@
         </div>
         <div class="footer-bottom">&copy; 2026 RRP Enterprises. All Rights Reserved.</div>
     </footer>
-
-    <script>
-        function switchTab(element, service) {
-            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
-            element.classList.add('active');
-            document.getElementById('serviceType').value = service;
-        }
-    </script>
 </body>
 </html>
