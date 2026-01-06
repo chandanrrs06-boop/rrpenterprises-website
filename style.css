@@ -1,114 +1,35 @@
-/* style.css v13.1 — Tunable presets included
-   - Default applied preset: Compact (Balanced)
-   - How to switch preset: replace the :root variables block with one of the other two blocks below (Airy or Bold Accent)
-   - To change accent color only: edit --accent and --accent-2 values in :root
-*/
+/* style.css v13.1 — Tuned and includes broken-image placeholder and screen-reader utilities */
 
-/* =========================
-   PRESET: Compact (DEFAULT)
-   - Slightly reduced font sizes and tighter vertical spacing
-   - Good for dense content and quicker scanning
-   ========================= */
+/* === Preset (Compact) variables === */
 :root{
   --bg:#071228;
   --card:#fff;
   --muted:#6b7280;
-  --accent:#1776d1;       /* primary accent */
-  --accent-2:#0b3f6b;     /* darker accent for buttons */
-  --brand:#e61e25;        /* brand red - used sparingly */
+  --accent:#1776d1;
+  --accent-2:#0b3f6b;
+  --brand:#e61e25;
   --text-light:#ffffff;
   --max-width:1120px;
   --gap:18px;
   --radius:12px;
   --header-h:66px;
 
-  /* typography scales (compact) */
   --fs-xxl:36px;
   --fs-xl:22px;
   --fs-lg:18px;
   --fs-md:15px;
   --fs-sm:13px;
 
-  /* spacing */
   --sp-xxl:56px;
   --sp-xl:40px;
   --sp-md:24px;
   --sp-sm:12px;
 
-  /* card sizes */
   --hero-card-w:360px;
   --logo-max-h:42px;
 }
 
-/* =========================
-   ALTERNATE PRESET: Airy
-   - Larger type, more whitespace, softer radii
-   - Copy this block and replace the :root above to use
-   =========================
-:root{
-  --bg:#071228;
-  --card:#ffffff;
-  --muted:#778089;
-  --accent:#0ea5a4;
-  --accent-2:#0a6461;
-  --brand:#e61e25;
-  --text-light:#ffffff;
-  --max-width:1200px;
-  --gap:28px;
-  --radius:18px;
-  --header-h:80px;
-
-  --fs-xxl:44px;
-  --fs-xl:26px;
-  --fs-lg:20px;
-  --fs-md:16px;
-  --fs-sm:14px;
-
-  --sp-xxl:80px;
-  --sp-xl:56px;
-  --sp-md:28px;
-  --sp-sm:16px;
-
-  --hero-card-w:420px;
-  --logo-max-h:48px;
-}
-*/
-
-/* =========================
-   ALTERNATE PRESET: Bold Accent
-   - Compact spacing with stronger accent color and heavier headings
-   - Copy this block and replace the :root above to use
-   =========================
-:root{
-  --bg:#081425;
-  --card:#ffffff;
-  --muted:#6b7280;
-  --accent:#e61e25;      /* bold brand red */
-  --accent-2:#a3181a;
-  --brand:#e61e25;
-  --text-light:#ffffff;
-  --max-width:1120px;
-  --gap:18px;
-  --radius:12px;
-  --header-h:68px;
-
-  --fs-xxl:38px;
-  --fs-xl:24px;
-  --fs-lg:19px;
-  --fs-md:15px;
-  --fs-sm:13px;
-
-  --sp-xxl:64px;
-  --sp-xl:44px;
-  --sp-md:24px;
-  --sp-sm:12px;
-
-  --hero-card-w:360px;
-  --logo-max-h:42px;
-}
-*/
-
-/* ======= Core Reset ======= */
+/* === Core reset === */
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{height:100%}
 body{
@@ -121,20 +42,38 @@ body{
   overflow-x:hidden;
 }
 
-/* small utility */
+/* Utility container */
 .container{max-width:var(--max-width);margin:0 auto;padding:0 20px;width:100%}
 .container-section{padding:var(--sp-md) 0}
 
-/* Skip link */
-.skip-link{position:absolute;left:-9999px;top:auto;overflow:hidden}
-.skip-link:focus{left:12px;top:12px;background:#fff;color:#000;padding:8px 12px;border-radius:6px}
+/* Screen-reader only helper (keeps accessibility but hides visually) */
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 
-/* Header */
+/* Broken image fallback visuals */
+.img-fallback{
+  width:100%;
+  height:56px;
+  border-radius:10px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:linear-gradient(90deg, rgba(2,6,23,0.03), rgba(255,255,255,0.02));
+  color:rgba(0,0,0,0.45);
+  font-weight:800;
+  font-size:13px;
+  border:1px solid rgba(0,0,0,0.04);
+}
+
+/* img safety */
+img{max-width:100%;height:auto;display:block;object-fit:contain}
+.brand-logo{height:44px;max-height:var(--logo-max-h);width:auto;display:block;object-fit:contain;border-radius:8px;background:#fff;padding:6px}
+.footer-logo{height:48px;object-fit:contain}
+
+/* Header & nav */
 .site-header{position:sticky;top:0;background:linear-gradient(180deg, rgba(0,5,12,0.92), rgba(0,5,12,0.86));backdrop-filter:blur(6px);z-index:50;box-shadow:0 2px 8px rgba(0,0,0,0.25)}
 .header-inner{display:flex;align-items:center;justify-content:space-between;height:var(--header-h);gap:14px}
 .brand{display:flex;align-items:center;gap:10px}
 .brand-link{display:flex;align-items:center;gap:12px;text-decoration:none;color:inherit}
-.brand-logo{height:44px;max-height:var(--logo-max-h);width:auto;display:block;object-fit:contain;border-radius:8px;background:#fff;padding:6px}
 .brand-text{line-height:1}
 .brand-name{font-size:var(--fs-sm);display:block;font-weight:800}
 .brand-tag{font-size:11px;color:var(--accent);display:block;letter-spacing:0.6px}
@@ -206,7 +145,6 @@ input[type="text"], input[type="tel"], input[type="date"], input[type="email"], 
 /* Footer */
 .site-footer{background:linear-gradient(180deg,var(--accent-2),#012029);color:#fff;padding:32px 0}
 .footer-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:16px;align-items:start}
-.footer-logo{height:48px;object-fit:contain}
 .footer-links{list-style:none}
 .footer-links li{margin:8px 0}
 .footer-links a{color:rgba(255,255,255,0.9);text-decoration:none}
@@ -218,7 +156,7 @@ input[type="text"], input[type="tel"], input[type="date"], input[type="email"], 
 .action-btn.call{background:#f59e0b}
 .action-btn.whatsapp{background:#25d366}
 
-/* ======== Responsive ======== */
+/* Responsive */
 @media (max-width:1024px){
   :root{ --hero-card-w:320px }
   .hero-grid{grid-template-columns:1fr var(--hero-card-w)}
@@ -245,6 +183,6 @@ input[type="text"], input[type="tel"], input[type="date"], input[type="email"], 
   .fixed-actions{right:10px;bottom:10px}
 }
 
-/* ===== Animations (subtle) ===== */
+/* subtle animations */
 .animate{opacity:0;transform:translateY(18px);transition:transform .8s cubic-bezier(.2,.8,.2,1),opacity .8s}
 .animate.in-view{opacity:1;transform:none}
