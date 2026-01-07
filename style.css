@@ -170,7 +170,7 @@ h1 { font-size: 3.5rem; font-weight: 800; line-height: 1.1; margin: 25px 0; lett
 
 @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
 
-/* Contact Cards */
+/* Contact Cards & Footer Grids */
 .contact-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -191,7 +191,26 @@ h1 { font-size: 3.5rem; font-weight: 800; line-height: 1.1; margin: 25px 0; lett
 
 .bottom-footer { text-align: center; padding-bottom: 40px; color: var(--text-dim); font-size: 0.75rem; letter-spacing: 1px; }
 
-/* Contact Form Specifics */
+/* --- NEW DUAL FORM STYLES (Merged) --- */
+.dual-form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 25px;
+    margin-bottom: 60px;
+}
+
+.form-card { padding: 40px; }
+.highlight-card { border: 1px solid rgba(234, 179, 8, 0.4); }
+
+.form-header { margin-bottom: 30px; }
+.form-header i { font-size: 2rem; color: var(--accent-gold); margin-bottom: 10px; }
+.form-header h3 { font-size: 1.5rem; color: white; }
+.form-header p { color: var(--text-dim); font-size: 0.85rem; }
+
+.input-row { display: flex; gap: 15px; }
+.input-row input, .input-row select { flex: 1; }
+
+/* Form Elements */
 .contact-form { display: flex; flex-direction: column; gap: 15px; margin-top: 25px; }
 input, textarea, select {
     background: rgba(255, 255, 255, 0.05);
@@ -202,6 +221,9 @@ input, textarea, select {
     font-family: inherit;
     width: 100%;
 }
+
+select option { background: var(--bg-dark); }
+
 .submit-btn {
     background: var(--accent-gold);
     color: #000;
@@ -220,9 +242,11 @@ input, textarea, select {
 
 /* --- Mobile Responsiveness - Full Set Restored --- */
 @media (max-width: 992px) {
-    .hero-grid, .contact-grid { 
+    .hero-grid, .contact-grid, .dual-form-grid { 
         grid-template-columns: 1fr; 
     }
+    .hero-main { grid-column: span 1; }
+    .input-row { flex-direction: column; gap: 15px; }
     .navbar { 
         flex-direction: column; 
         padding: 20px; 
