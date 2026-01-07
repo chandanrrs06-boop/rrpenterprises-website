@@ -3,100 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RRP ENTERPRISES | Logistics Intelligence Partner</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    <title>RRP ENTERPRISES | Intelligent Logistics Solutions</title>
+    <meta name="description" content="RRP ENTERPRISES - Technology-first logistics company specialized in B2B supply chain resilience.">
+    
+    <link rel="stylesheet" href="style.css">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #020617; }
-        .glass { background: rgba(15, 23, 42, 0.8); border: 1px solid rgba(255,255,255,0.05); backdrop-filter: blur(12px); }
-        .accent-gradient { background: linear-gradient(135deg, #3b82f6 0%, #2dd4bf 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .float-btn { position: fixed; bottom: 20px; right: 20px; display: flex; flex-direction: column; gap: 10px; z-index: 1000; }
-        .btn-circle { width: 55px; height: 55px; border-radius: 50%; display: flex; items-center: center; justify-content: center; color: white; font-size: 24px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); transition: transform 0.3s; }
-        .btn-circle:hover { transform: scale(1.1); }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
-<body class="text-slate-200 min-h-screen py-12 px-4 pb-32">
+<body>
 
-    <div class="float-btn">
-        <a href="https://wa.me/919494831803" class="btn-circle bg-green-500" title="WhatsApp Us"><i class="fab fa-whatsapp"></i></a>
-        <a href="tel:+919494831803" class="btn-circle bg-blue-600" title="Quick Call"><i class="fas fa-phone"></i></a>
+    <div class="floating-actions">
+        <a href="https://wa.me/919494831803" target="_blank" class="action-btn whatsapp" title="WhatsApp Us">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="tel:+919494831803" class="action-btn phone" title="Call Now">
+            <i class="fas fa-phone-alt"></i>
+        </a>
     </div>
 
-    <div class="max-w-6xl mx-auto space-y-6">
-        
-        <nav class="flex justify-between items-center px-6 py-4 glass rounded-2xl">
-            <div class="text-xl font-extrabold tracking-tighter text-white">RRP <span class="text-blue-500">TRANSPORT</span></div>
-            <a href="https://www.linkedin.com/in/rrpenterprises" target="_blank" class="bg-blue-700 hover:bg-blue-600 px-4 py-2 rounded-lg text-xs font-bold transition-all">
-                <i class="fab fa-linkedin mr-2"></i>FOLLOW ON LINKEDIN
-            </a>
+    <div class="container">
+        <nav class="navbar glass">
+            <div class="logo">RRP <span>ENTERPRISES</span></div>
+            <div class="nav-links">
+                <a href="https://www.linkedin.com/in/rrpenterprises" target="_blank" class="social-link">
+                    <i class="fab fa-linkedin"></i> <span>LinkedIn</span>
+                </a>
+                <a href="mailto:contact@rrpenterprises.co.in" class="cta-btn">Contact Us</a>
+            </div>
         </nav>
 
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-            <div class="lg:col-span-2 glass p-10 rounded-[2rem] relative overflow-hidden">
-                <span class="px-4 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-bold uppercase tracking-widest">Anantapur Operations HQ</span>
-                <h1 class="text-5xl font-extrabold mt-6 leading-tight">Reliable Logistics <br><span class="accent-gradient">Across India</span></h1>
-                <p class="mt-6 text-lg text-slate-400 max-w-xl">Deeply rooted in the Indian B2B sector, specializing in building resilient and transparent supply chain solutions.</p>
+        <main class="hero-grid">
+            <section class="hero-main glass">
+                <span class="badge">B2B Logistics Intelligence</span>
+                <h1>Powering Reliable <br><span class="gradient-text">Supply Chains.</span></h1>
+                <p>Strategic enablers of business velocity. We leverage technology and operational rigor to deliver cost-effective, transparent, and secure logistics.</p>
                 
-                <div class="mt-12 flex gap-8">
-                    <div>
-                        <p class="text-[10px] font-bold text-slate-500 uppercase mb-1">Launch Date</p>
-                        <p class="text-xl font-mono font-bold text-blue-400">FEB 01, 2026</p>
+                <div class="metrics">
+                    <div class="metric-item">
+                        <span class="m-val">98.5%</span>
+                        <span class="m-lab">OTIF Metric</span>
                     </div>
-                    <div class="h-10 w-px bg-slate-800"></div>
-                    <div>
-                        <p class="text-[10px] font-bold text-slate-500 uppercase mb-1">Status</p>
-                        <p class="text-xl font-bold text-green-400 italic">SYSTEMS READY</p>
+                    <div class="divider"></div>
+                    <div class="metric-item">
+                        <span class="m-val">100%</span>
+                        <span class="m-lab">Real-Time Visibility</span>
                     </div>
+                </div>
+            </section>
+
+            <aside class="hero-side glass">
+                <h3>Our Core Services</h3>
+                <ul class="service-list">
+                    <li><i class="fas fa-truck-moving"></i> FTL & LTL Integration</li>
+                    <li><i class="fas fa-gears"></i> Project Cargo Management</li>
+                    <li><i class="fas fa-boxes-stacked"></i> 3PL/4PL Warehousing</li>
+                    <li><i class="fas fa-ship"></i> Freight Forwarding</li>
+                </ul>
+                <div class="status-box">
+                    <p>Network Status:</p>
+                    <span class="pulse"></span> Active Pan-India Operations
+                </div>
+            </aside>
+        </main>
+
+        <footer class="contact-grid">
+            <div class="card glass">
+                <i class="fas fa-map-location-dot icon"></i>
+                <h4>HQ Location</h4>
+                <p>Bangalore Highway, Beside MG Car Showroom, Opposite Sakshi Office, Anantapur 515001</p>
+                <a href="https://maps.app.goo.gl/hofLsJVkoLqk5BRg8?g_st=awb" target="_blank" class="map-link">View on Maps →</a>
+            </div>
+
+            <div class="card glass">
+                <i class="fas fa-phone-volume icon"></i>
+                <h4>24/7 Support</h4>
+                <div class="phone-links">
+                    <a href="tel:9494831803">+91 94948 31803</a>
+                    <a href="tel:9014884668">+91 90148 84668</a>
                 </div>
             </div>
 
-            <div class="glass p-8 rounded-[2rem] border-t-4 border-t-blue-500">
-                <h3 class="text-lg font-bold mb-2 tracking-tight">Enterprise Client Portal</h3>
-                <p class="text-sm text-slate-500 mb-6">Enter your email to get notified when the predictive tracking dashboard goes live.</p>
-                <form class="space-y-3">
-                    <input type="email" placeholder="Business Email" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-blue-500 outline-none">
-                    <button class="w-full bg-white text-black font-bold py-3 rounded-xl text-sm hover:bg-blue-400 transition-colors">Request Early Access</button>
-                </form>
+            <div class="card glass">
+                <i class="fas fa-envelope-open icon"></i>
+                <h4>Digital Desk</h4>
+                <p>contact@rrpenterprises.co.in</p>
+                <p class="site-link">www.rrpenterprises.co.in</p>
             </div>
-        </div>
+        </footer>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div class="glass p-8 rounded-3xl relative">
-                <i class="fas fa-map-marker-alt text-blue-500 absolute top-8 right-8 text-xl opacity-20"></i>
-                <h4 class="text-xs font-bold text-slate-500 uppercase mb-4 tracking-widest">Headquarters</h4>
-                <p class="text-sm font-semibold text-white mb-1">RRP TRANSPORT</p>
-                <p class="text-xs text-slate-400 leading-relaxed italic">
-                    Bangalore Highway, Beside MG Car Showroom,<br>
-                    Opposite Sakshi Office, Anantapur - 515001
-                </p>
-                <a href="https://maps.google.com/?q=RRP+TRANSPORT+Anantapur+Bangalore+Highway" target="_blank" class="text-blue-400 text-[10px] font-bold mt-4 inline-block uppercase hover:underline">Open in Google Maps →</a>
-            </div>
-
-            <div class="glass p-8 rounded-3xl relative">
-                <i class="fas fa-phone-alt text-blue-500 absolute top-8 right-8 text-xl opacity-20"></i>
-                <h4 class="text-xs font-bold text-slate-500 uppercase mb-4 tracking-widest">Hotlines</h4>
-                <div class="space-y-3">
-                    <div class="flex items-center justify-between">
-                        <span class="text-xs text-slate-500">Mobile 1:</span>
-                        <a href="tel:9494831803" class="text-sm font-bold text-white hover:text-blue-400">+91 94948 31803</a>
-                    </div>
-                    <div class="flex items-center justify-between">
-                        <span class="text-xs text-slate-500">Mobile 2:</span>
-                        <a href="tel:9014884668" class="text-sm font-bold text-white hover:text-blue-400">+91 90148 84668</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="glass p-8 rounded-3xl relative">
-                <i class="fas fa-envelope text-blue-500 absolute top-8 right-8 text-xl opacity-20"></i>
-                <h4 class="text-xs font-bold text-slate-500 uppercase mb-4 tracking-widest">Digital Contact</h4>
-                <p class="text-sm font-bold text-white mb-1">contact@rrpenterprises.co.in</p>
-                <p class="text-xs text-slate-500 mb-4">Official Domain: rrpenterprises.co.in</p>
-                <div class="flex gap-3">
-                    <a href="https://www.linkedin.com/in/rrpenterprises" class="bg-slate-800 p-2 rounded-lg hover:bg-blue-900 transition-colors"><i class="fab fa-linkedin"></i></a>
-                </div>
-            </div>
+        <div class="bottom-footer">
+            <p>© 2026 RRP ENTERPRISES. All Rights Reserved.</p>
         </div>
     </div>
 
