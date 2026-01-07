@@ -1,1 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | RRP ENTERPRISES</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar glass">
+            <a href="index.html" class="logo-container">
+                <img src="assets/logo.png" alt="RRP Logo" class="main-logo">
+                <div class="logo-text">RRP <span>ENTERPRISES</span></div>
+            </a>
+            <div class="nav-links"><a href="index.html" class="social-link">Home</a></div>
+        </nav>
 
+        <main class="hero-grid">
+            <section class="hero-main glass">
+                <span class="badge">Inquiry Desk</span>
+                <h2>Request a <span class="gradient-text">Quote.</span></h2>
+                
+                <form class="contact-form" action="https://formspree.io/f/YOUR_ID" method="POST">
+                    <input type="text" name="name" placeholder="Full Name" required>
+                    <input type="email" name="email" placeholder="Business Email" required>
+                    <select name="service">
+                        <option value="ftl">FTL Transportation</option>
+                        <option value="freight">Freight Forwarding</option>
+                        <option value="contract">Contract Logistics</option>
+                        <option value="project">Project Logistics</option>
+                    </select>
+                    <textarea name="message" rows="5" placeholder="Describe your requirements..." required></textarea>
+                    <button type="submit" class="submit-btn">Send Inquiry</button>
+                </form>
+            </section>
+
+            <aside class="hero-side glass">
+                <h3>Contact Details</h3>
+                <div class="phone-links" style="margin-bottom: 30px;">
+                    <a href="tel:9494831803"><i class="fas fa-phone"></i> +91 94948 31803</a>
+                    <a href="mailto:contact@rrpenterprises.co.in"><i class="fas fa-envelope"></i> contact@rrpenterprises.co.in</a>
+                </div>
+                <div class="status-box">
+                    <p>Typical Response Time:</p>
+                    <span class="pulse"></span> 24 Hours
+                </div>
+            </aside>
+        </main>
+    </div>
+</body>
+</html>
