@@ -11,6 +11,10 @@
 </head>
 <body>
 
+    <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" id="backToTop" class="back-to-top" title="Go to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
     <div class="floating-actions">
         <a href="https://wa.me/919494831803" target="_blank" class="action-btn whatsapp" title="WhatsApp Us">
             <i class="fab fa-whatsapp"></i>
@@ -26,7 +30,12 @@
                 <img src="assets/logo.png" alt="RRP ENTERPRISES Logo" class="main-logo">
                 <div class="logo-text">RRP <span>ENTERPRISES</span></div>
             </a>
-            <div class="nav-links">
+            
+            <div class="menu-toggle" id="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+
+            <div class="nav-links" id="nav-menu">
                 <a href="about.html" class="social-link">About Us</a>
                 <a href="services.html" class="social-link">Services</a>
                 <a href="contact.html" class="cta-btn">Contact Us</a>
@@ -148,7 +157,7 @@
                     </div>
                     <p class="footer-addr">
                         <i class="fas fa-map-marker-alt"></i>
-                        Bangalore Highway, Beside MG Car Showroom, Anantapur 515001
+                        Anantapur, Andhra Pradesh 515001
                     </p>
                     <div class="footer-socials">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -179,9 +188,8 @@
                     <h4>Address</h4>
                     <div class="footer-contact-info">
                         <p><a href="tel:9494831803"><i class="fas fa-phone-alt"></i> +91 94948 31803</a></p>
-                        <p><a href="tel:9014884668"><i class="fas fa-phone-alt"></i> +91 90148 84668</a></p>
                         <p><a href="mailto:contact@rrpenterprises.co.in"><i class="fas fa-envelope"></i> contact@rrpenterprises.co.in</a></p>
-                        <p><a href="https://wa.me/919494831803"><i class="fab fa-whatsapp"></i> Contact Message on Whatsapp</a></p>
+                        <p><a href="https://wa.me/919494831803"><i class="fab fa-whatsapp"></i> WhatsApp Message</a></p>
                     </div>
                 </div>
             </div>
@@ -191,5 +199,23 @@
             <p>© 2026 RRP ENTERPRISES. All Rights Reserved.</p>
         </div>
     </div>
+
+    <script>
+        const menuToggle = document.getElementById('mobile-menu');
+        const navMenu = document.getElementById('nav-menu');
+        const backToTop = document.getElementById('backToTop');
+
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        window.onscroll = function() {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                backToTop.style.display = "flex";
+            } else {
+                backToTop.style.display = "none";
+            }
+        };
+    </script>
 </body>
 </html>
