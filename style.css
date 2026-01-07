@@ -63,12 +63,25 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 40px;
+    padding: 12px 40px;
     margin-top: 20px;
 }
 
-.logo { font-size: 1.3rem; font-weight: 800; letter-spacing: -0.5px; }
-.logo span { color: var(--accent-blue); }
+/* Logo Specific Styles */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.main-logo {
+    height: 40px; /* Adjust height based on your logo aspect ratio */
+    width: auto;
+    object-fit: contain;
+}
+
+.logo-text { font-size: 1.2rem; font-weight: 800; letter-spacing: -0.5px; }
+.logo-text span { color: var(--accent-blue); }
 
 .nav-links { display: flex; align-items: center; gap: 30px; }
 .social-link { color: var(--text-dim); text-decoration: none; font-size: 0.9rem; font-weight: 600; display: flex; align-items: center; gap: 8px; transition: 0.3s; }
@@ -77,8 +90,8 @@ body {
 .cta-btn {
     background: var(--accent-blue);
     color: white;
-    padding: 12px 24px;
-    border-radius: 12px;
+    padding: 10px 20px;
+    border-radius: 10px;
     text-decoration: none;
     font-weight: 700;
     font-size: 0.85rem;
@@ -173,4 +186,5 @@ h1 { font-size: 3.5rem; font-weight: 800; line-height: 1.1; margin: 25px 0; lett
     h1 { font-size: 2.5rem; }
     .nav-links span { display: none; }
     .hero-main { padding: 40px; }
+    .main-logo { height: 32px; }
 }
