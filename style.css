@@ -1,12 +1,13 @@
-/* Base Variables - Full Set Restored */
+/* Base Variables - Full Set Restored & Re-branded */
 :root {
     --bg-dark: #020617;
     --card-bg: rgba(15, 23, 42, 0.7);
-    --accent-blue: #3b82f6;
-    --accent-teal: #2dd4bf;
+    --accent-gold: #eab308; /* Blended with your Logo */
+    --accent-gold-hover: #ca8a04;
     --text-main: #f8fafc;
     --text-dim: #94a3b8;
-    --glass-border: rgba(255, 255, 255, 0.08);
+    --glass-border: rgba(234, 179, 8, 0.15); /* Gold tinted border */
+    --gradient-gold: linear-gradient(135deg, #facc15, #eab308);
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -56,7 +57,7 @@ body {
 
 .action-btn:hover { transform: scale(1.1) translateY(-5px); }
 .whatsapp { background: #22c55e; }
-.phone { background: var(--accent-blue); }
+.phone { background: var(--accent-gold); color: #000; }
 
 /* Navigation */
 .navbar {
@@ -82,7 +83,7 @@ body {
 }
 
 .logo-text { font-size: 1.2rem; font-weight: 800; letter-spacing: -0.5px; }
-.logo-text span { color: var(--accent-blue); }
+.logo-text span { color: var(--accent-gold); }
 
 .nav-links { display: flex; align-items: center; gap: 30px; }
 .nav-links a { text-decoration: none; }
@@ -90,8 +91,8 @@ body {
 .social-link:hover { color: white; }
 
 .cta-btn {
-    background: var(--accent-blue);
-    color: white !important;
+    background: var(--accent-gold);
+    color: #000 !important;
     padding: 10px 20px;
     border-radius: 10px;
     font-weight: 700;
@@ -101,7 +102,7 @@ body {
     display: inline-block;
 }
 
-.cta-btn:hover { background: #2563eb; transform: translateY(-2px); }
+.cta-btn:hover { background: var(--accent-gold-hover); transform: translateY(-2px); }
 
 /* Hero Section */
 .hero-grid {
@@ -111,10 +112,17 @@ body {
     margin: 40px 0;
 }
 
-.hero-main { padding: 60px; position: relative; }
+.hero-main { 
+    padding: 60px; 
+    position: relative; 
+    background: linear-gradient(rgba(2, 6, 23, 0.8), rgba(2, 6, 23, 0.6)), url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=2070&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+}
+
 .badge {
-    background: rgba(59, 130, 246, 0.1);
-    color: var(--accent-blue);
+    background: rgba(234, 179, 8, 0.1);
+    color: var(--accent-gold);
     padding: 6px 16px;
     border-radius: 100px;
     font-size: 0.7rem;
@@ -124,12 +132,12 @@ body {
 }
 
 h1 { font-size: 3.5rem; font-weight: 800; line-height: 1.1; margin: 25px 0; letter-spacing: -2px; }
-.gradient-text { background: linear-gradient(135deg, var(--accent-blue), var(--accent-teal)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.gradient-text { background: var(--gradient-gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
 
-.hero-main p { color: var(--text-dim); font-size: 1.1rem; max-width: 550px; }
+.hero-main p { color: var(--text-main); font-size: 1.1rem; max-width: 550px; }
 
 .metrics { display: flex; gap: 40px; margin-top: 50px; }
-.m-val { display: block; font-size: 2rem; font-weight: 800; }
+.m-val { display: block; font-size: 2rem; font-weight: 800; color: var(--accent-gold); }
 .m-lab { color: var(--text-dim); font-size: 0.75rem; font-weight: 600; text-transform: uppercase; }
 .divider { width: 1px; background: var(--glass-border); }
 
@@ -147,7 +155,7 @@ h1 { font-size: 3.5rem; font-weight: 800; line-height: 1.1; margin: 25px 0; lett
     font-size: 0.9rem;
     font-weight: 600;
 }
-.service-list i { color: var(--accent-blue); width: 20px; font-size: 1.1rem; }
+.service-list i { color: var(--accent-gold); width: 20px; font-size: 1.1rem; }
 
 .status-box { margin-top: 40px; padding-top: 25px; border-top: 1px solid var(--glass-border); font-size: 0.8rem; font-weight: 600; color: var(--text-dim); }
 .pulse {
@@ -171,15 +179,15 @@ h1 { font-size: 3.5rem; font-weight: 800; line-height: 1.1; margin: 25px 0; lett
 }
 
 .card { padding: 40px; text-align: center; }
-.icon { font-size: 1.5rem; color: var(--accent-blue); margin-bottom: 20px; opacity: 0.9; }
+.icon { font-size: 1.5rem; color: var(--accent-gold); margin-bottom: 20px; opacity: 0.9; }
 .card h4 { margin-bottom: 15px; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1.5px; color: var(--text-main); }
 .card p { color: var(--text-dim); font-size: 0.85rem; }
 
-.map-link { display: inline-block; margin-top: 15px; font-size: 0.7rem; font-weight: 800; color: var(--accent-blue); text-decoration: none; border-bottom: 1px solid transparent; transition: 0.3s; }
-.map-link:hover { border-bottom: 1px solid var(--accent-blue); }
+.map-link { display: inline-block; margin-top: 15px; font-size: 0.7rem; font-weight: 800; color: var(--accent-gold); text-decoration: none; border-bottom: 1px solid transparent; transition: 0.3s; }
+.map-link:hover { border-bottom: 1px solid var(--accent-gold); }
 
 .phone-links a { display: block; font-size: 1.1rem; font-weight: 800; color: white; text-decoration: none; margin-bottom: 5px; transition: 0.3s; }
-.phone-links a:hover { color: var(--accent-blue); }
+.phone-links a:hover { color: var(--accent-gold); }
 
 .bottom-footer { text-align: center; padding-bottom: 40px; color: var(--text-dim); font-size: 0.75rem; letter-spacing: 1px; }
 
@@ -195,8 +203,8 @@ input, textarea, select {
     width: 100%;
 }
 .submit-btn {
-    background: var(--accent-blue);
-    color: white;
+    background: var(--accent-gold);
+    color: #000;
     border: none;
     padding: 15px;
     border-radius: 12px;
@@ -204,13 +212,13 @@ input, textarea, select {
     cursor: pointer;
     transition: 0.3s;
 }
-.submit-btn:hover { background: var(--accent-teal); transform: translateY(-3px); }
+.submit-btn:hover { background: #facc15; transform: translateY(-3px); }
 
 /* Brands Grid */
 .brand-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 30px; margin-top: 40px; }
 .brand-item { font-weight: 800; color: var(--text-dim); font-size: 0.9rem; text-transform: uppercase; }
 
-/* --- Mobile Responsiveness - Full Fix --- */
+/* --- Mobile Responsiveness - Full Set Restored --- */
 @media (max-width: 992px) {
     .hero-grid, .contact-grid { 
         grid-template-columns: 1fr; 
