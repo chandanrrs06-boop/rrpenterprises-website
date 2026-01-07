@@ -1,4 +1,4 @@
-/* Base Variables */
+/* Base Variables - Kept exactly as provided */
 :root {
     --bg-dark: #020617;
     --card-bg: rgba(15, 23, 42, 0.7);
@@ -67,7 +67,6 @@ body {
     margin-top: 20px;
 }
 
-/* Logo Specific Styles */
 .logo-container {
     display: flex;
     align-items: center;
@@ -182,7 +181,7 @@ h1 { font-size: 3.5rem; font-weight: 800; line-height: 1.1; margin: 25px 0; lett
 
 .bottom-footer { text-align: center; padding-bottom: 40px; color: var(--text-dim); font-size: 0.75rem; letter-spacing: 1px; }
 
-/* Form Styles for Contact Page */
+/* Added styles for Contact Form */
 .contact-form { display: flex; flex-direction: column; gap: 15px; margin-top: 25px; }
 input, textarea, select {
     background: rgba(255, 255, 255, 0.05);
